@@ -15,7 +15,6 @@ public class PlayerController : MonoBehaviour {
 
 	private Rigidbody rb;
 
-	// Start is called before the first frame update
 	void Start() {
 		rb = GetComponent<Rigidbody>();
 	}
@@ -29,25 +28,14 @@ public class PlayerController : MonoBehaviour {
 		rb.AddForce(movement * speed);
 	}
 
-	// Update is called once per frame
-	void Update() {
-
-	}
-
 	private void OnCollisionEnter(Collision collision) {
-		//if (collision.gameObject.tag == "Collectable") {
-		if (collision.gameObject.GetComponent<Collectable>() != null) {
 
-			//Debug.Log("collectable !");
+		if (collision.gameObject.GetComponent<Collectable>() != null) {
 
 			float resistance = collision.gameObject.GetComponent<Collectable>().resistance;
 			float collisionWeight = collision.gameObject.GetComponent<Collectable>().weight;
 
-			//Debug.Log(resistance);
-
 			if (collisionWeight < weight) {
-
-				//Debug.Log("stick !!");
 
 				//stick to player
 				Destroy(collision.rigidbody);
@@ -65,7 +53,8 @@ public class PlayerController : MonoBehaviour {
 			} else if (resistance < power) {
 				if (collision.gameObject.tag == "Explodable") {
 					//Debug.Log("explode");
-					Explode(collision.transform);
+					//Explode(collision.transform);
+					collision.collider.SendMessage("Shatter", collision, SendMessageOptions.DontRequireReceiver);
 				}
 
 			}
@@ -77,21 +66,6 @@ public class PlayerController : MonoBehaviour {
 		//piece.collider = "Collectable";
 		piece.GetComponent<Collider>().isTrigger = false;
 	}
-
-	//private void OnTriggerStay(Collider other) {
-	//	Debug.Log("enter on player");
-	//	other.gameObject.SetActive(false);
-	//	Destroy(other);
-	//}
-
-	//private void OnTriggerEnter(Collider collision) {
-	//	Debug.Log("enter on player");
-	//	if (collision.gameObject.tag == "Collectable") {
-	//		Debug.Log("enter on player");
-	//	}
-	//	collision.gameObject.SetActive(false);
-	//	Destroy(collision);
-	//}
 
 	void Explode(Transform target) {
 
@@ -115,8 +89,8 @@ public class PlayerController : MonoBehaviour {
 		float pieceResistance = target.GetComponent<Collectable>().resistance / (triangles.Length / 3);
 		float pieceWeigh = target.GetComponent<Collectable>().weight / (triangles.Length / 3);
 
-		//Debug.Log(pieceResistance);
-		//Debug.Log(pieceWeigh);
+		//float pieceResistance = 1;
+		//float pieceWeigh = 1;
 
 		// get each face
 		for (int i = 0; i < triangles.Length; i += 3) {
@@ -124,7 +98,20 @@ public class PlayerController : MonoBehaviour {
 			Vector3 averageNormal = (normals[triangles[i]] + normals[triangles[i + 1]] + normals[triangles[i + 2]]).normalized;
 			Vector3 s = target.GetComponent<Renderer>().bounds.size;
 			float extrudeSize = ((s.x + s.y + s.z) / 3) * 0.3f;
-			CreateMeshPiece(extrudeSize, target.transform.position, target.GetComponent<Renderer>().material, index, averageNormal, vertices[triangles[i]], vertices[triangles[i + 1]], vertices[triangles[i + 2]], uvs[triangles[i]], uvs[triangles[i + 1]], uvs[triangles[i + 2]], pieceResistance, pieceWeigh);
+			CreateMeshPiece(
+				extrudeSize,
+				target.transform.position,
+				target.GetComponent<Renderer>().material,
+				index, averageNormal,
+				vertices[triangles[i]],
+				vertices[triangles[i + 1]],
+				vertices[triangles[i + 2]],
+				uvs[triangles[i]],
+				uvs[triangles[i + 1]],
+				uvs[triangles[i + 2]],
+				pieceResistance,
+				pieceWeigh
+			);
 			index++;
 		}
 		// destroy original
@@ -230,8 +217,6 @@ public class PlayerController : MonoBehaviour {
 
 		mc.sharedMesh = mesh;
 		mc.convex = true;
-
-
 
 		//destroy piece
 		//go.AddComponent<MeshFader>();
