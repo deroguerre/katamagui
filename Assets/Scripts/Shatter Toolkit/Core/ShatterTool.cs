@@ -286,8 +286,14 @@ namespace ShatterToolkit {
 				meshCollider.sharedMesh = null;
 			}
 
-			float newResistance = gameObject.GetComponent<Collectable>().resistance / newHulls.Count;
-			float newWeight = gameObject.GetComponent<Collectable>().weight / newHulls.Count;
+			float newResistance = 0;
+			float newWeight = 0;
+
+			if (gameObject.GetComponent<Collectable>() != null) {
+
+				newResistance = gameObject.GetComponent<Collectable>().resistance / newHulls.Count;
+				newWeight = gameObject.GetComponent<Collectable>().weight / newHulls.Count;
+			}
 
 			// Create new game objects
 			newGameObjects = new GameObject[newHulls.Count];
@@ -336,7 +342,9 @@ namespace ShatterToolkit {
 				// Update properties
 				newShatterTool.CalculateCenter();
 
-				newGameObject.GetComponent<Collectable>().enable(newResistance, newWeight);
+				if (newGameObject.GetComponent<Collectable>() != null) {
+					newGameObject.GetComponent<Collectable>().enable(newResistance, newWeight);
+				}
 
 				newGameObjects[i] = newGameObject;
 			}

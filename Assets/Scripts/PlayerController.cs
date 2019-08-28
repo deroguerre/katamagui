@@ -8,15 +8,21 @@ public class PlayerController : MonoBehaviour {
 	public Transform exploPrefab;
 	public Transform smokePrefab;
 
-	public float speed;
+	public float moveSpeed = 50.0f;
+	public float drag = 0.5f;
+	public float terminalRotationSpeed = 25.0f;
+	public Vector3 MoveVector { set; get; }
 	public float increaseSizeSpeed = 0.05f;
 	public float power = 1;
 	public float weight = 3;
 
-	private Rigidbody rb;
+	private Rigidbody thisRigibody;
+	private Transform camTransform;
 
 	void Start() {
-		rb = GetComponent<Rigidbody>();
+		thisRigibody = GetComponent<Rigidbody>();
+		thisRigibody.maxAngularVelocity = terminalRotationSpeed;
+		thisRigibody.drag = drag;
 	}
 
 	private void FixedUpdate() {
@@ -25,7 +31,7 @@ public class PlayerController : MonoBehaviour {
 
 		Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
 
-		rb.AddForce(movement * speed);
+		thisRigibody.AddForce(movement * moveSpeed);
 	}
 
 	private void OnCollisionEnter(Collision collision) {
@@ -36,7 +42,6 @@ public class PlayerController : MonoBehaviour {
 			float collisionWeight = collision.gameObject.GetComponent<Collectable>().weight;
 
 			bool isCollectable = collision.gameObject.GetComponent<Collectable>().isCollectable;
-
 
 			//stick to player
 			if (collisionWeight < weight && isCollectable) {
