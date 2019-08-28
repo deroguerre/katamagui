@@ -19,4 +19,17 @@ public class Collectable : MonoBehaviour
     {
         
     }
+
+	public void enable(float pResistance, float pWeight) {
+		//Debug.Log("Collectable enabled");
+		StartCoroutine(enableCollectable(pResistance, pWeight));
+	}
+
+	private IEnumerator enableCollectable(float pResistance, float pWeight) {
+		yield return new WaitForSeconds(3);
+		isCollectable = true;
+		resistance = pResistance;
+		weight = pWeight;
+		//Destroy(gameObject.GetComponent<Rigidbody>());
+	}
 }
