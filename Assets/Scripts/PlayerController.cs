@@ -18,20 +18,43 @@ public class PlayerController : MonoBehaviour {
 
 	private Rigidbody thisRigibody;
 	private Transform camTransform;
+	private Transform CamTarget;
+	public Camera MainCamera;
 
 	void Start() {
 		thisRigibody = GetComponent<Rigidbody>();
 		thisRigibody.maxAngularVelocity = terminalRotationSpeed;
 		thisRigibody.drag = drag;
+		CamTarget = gameObject.transform.Find("CamTarget");
 	}
 
 	private void FixedUpdate() {
 		float moveHorizontal = Input.GetAxis("Horizontal");
 		float moveVertical = Input.GetAxis("Vertical");
 
-		Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
+		Vector2 input = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+		input = Vector2.ClampMagnitude(input, 1);
 
-		thisRigibody.AddForce(movement * moveSpeed);
+		Vector3 camF = MainCamera.transform.forward;
+		Vector3 camR = MainCamera.transform.right;
+
+		camF.y = 0;
+		camR.y = 0;
+		camF = camF.normalized;
+		camR = camR.normalized;
+
+		Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
+		Vector3 movement2 = new Vector3(moveHorizontal, 0.0f, moveVertical) * Time.deltaTime * moveSpeed;
+		Vector3 movement3 = (camF * movement.y + camR * movement.x) * Time.deltaTime;
+		Vector3 movement4 = (camF * input.y + camR * input.x) * Time.deltaTime * moveSpeed * 100;
+
+		//thisRigibody.AddForce(movement * moveSpeed);
+		thisRigibody.AddForce(movement4);
+
+		if (CamTarget != null) {
+			Debug.Log("Camera targeted");
+			CamTarget.transform.position = gameObject.transform.position;
+		}
 	}
 
 	private void OnCollisionEnter(Collision collision) {
