@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour {
 	public Transform exploPrefab;
 	public Transform smokePrefab;
 
+	public Camera MainCamera;
 	public float moveSpeed = 50.0f;
 	public float drag = 0.5f;
 	public float terminalRotationSpeed = 25.0f;
@@ -16,10 +17,14 @@ public class PlayerController : MonoBehaviour {
 	public float power = 1;
 	public float weight = 3;
 
+	public float jumpHeight = 7f;
+	public bool isGrounded;
+	public float fallMultiplier = 2.5f;
+	public float lowJumpMultiplier = 2f;
+
 	private Rigidbody thisRigibody;
 	private Transform camTransform;
 	private Transform CamTarget;
-	public Camera MainCamera;
 
 	void Start() {
 		thisRigibody = GetComponent<Rigidbody>();
@@ -29,8 +34,8 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	private void FixedUpdate() {
-		float moveHorizontal = Input.GetAxis("Horizontal");
-		float moveVertical = Input.GetAxis("Vertical");
+		//float moveHorizontal = Input.GetAxis("Horizontal");
+		//float moveVertical = Input.GetAxis("Vertical");
 
 		Vector2 input = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
 		input = Vector2.ClampMagnitude(input, 1);
@@ -43,13 +48,24 @@ public class PlayerController : MonoBehaviour {
 		camF = camF.normalized;
 		camR = camR.normalized;
 
-		Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
-		Vector3 movement2 = new Vector3(moveHorizontal, 0.0f, moveVertical) * Time.deltaTime * moveSpeed;
-		Vector3 movement3 = (camF * movement.y + camR * movement.x) * Time.deltaTime;
+		//Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
+		//Vector3 movement2 = new Vector3(moveHorizontal, 0.0f, moveVertical) * Time.deltaTime * moveSpeed;
+		//Vector3 movement3 = (camF * movement.y + camR * movement.x) * Time.deltaTime;
 		Vector3 movement4 = (camF * input.y + camR * input.x) * Time.deltaTime * moveSpeed * 100;
 
 		//thisRigibody.AddForce(movement * moveSpeed);
 		thisRigibody.AddForce(movement4);
+
+		if(Input.GetButtonDown("Jump")) {
+			Debug.Log("Jump");
+			thisRigibody.AddForce(Vector3.up * jumpHeight * 100);
+		}
+
+		if(thisRigibody.velocity.y < 0) {
+			thisRigibody.velocity += Vector3.up * Physics.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
+		} else if (thisRigibody.velocity.y > 0 && !Input.GetButton("Jump")) {
+			thisRigibody.velocity += Vector3.up * Physics.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
+		}
 
 		if (CamTarget != null) {
 			Debug.Log("Camera targeted");
@@ -57,30 +73,40 @@ public class PlayerController : MonoBehaviour {
 		}
 	}
 
-	private void OnCollisionEnter(Collision collision) {
+	private void OnCollisionEnter(Collision other) {
 
-		if (collision.gameObject.GetComponent<Collectable>() != null) {
+		if (other.gameObject.tag == "Ground") {
+			isGrounded = true;
+		}
 
-			float resistance = collision.gameObject.GetComponent<Collectable>().resistance;
-			float collisionWeight = collision.gameObject.GetComponent<Collectable>().weight;
+		if (other.gameObject.GetComponent<Collectable>() != null) {
 
-			bool isCollectable = collision.gameObject.GetComponent<Collectable>().isCollectable;
+			float resistance = other.gameObject.GetComponent<Collectable>().resistance;
+			float collisionWeight = other.gameObject.GetComponent<Collectable>().weight;
+
+			bool isCollectable = other.gameObject.GetComponent<Collectable>().isCollectable;
 
 			//stick to player
 			if (collisionWeight < weight && isCollectable) {
 
 				//Debug.Log("Stuck");
 
-				Destroy(collision.rigidbody);
-				collision.collider.isTrigger = true;
+				Destroy(other.rigidbody);
+				other.collider.isTrigger = true;
 
 				//remove trigger on collider
 				//StartCoroutine(SetTrigger(collision.gameObject));
 
-				collision.gameObject.transform.SetParent(gameObject.transform);
+				other.gameObject.transform.SetParent(gameObject.transform);
 
 			}
 
+		}
+	}
+
+	private void OnCollisionExit(Collision other) {
+		if (other.gameObject.tag == "Ground") {
+			isGrounded = false;
 		}
 	}
 

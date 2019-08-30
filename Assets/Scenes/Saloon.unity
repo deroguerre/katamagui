@@ -6009,7 +6009,7 @@ MonoBehaviour:
       rotateWhenClick: 0
       keyToRotate: mouse 0
       invertXInput: 0
-      invertYInput: 1
+      invertYInput: 0
     OrbitalThatFollows:
       displacementSpeed: 5
       customLookAt: 0
@@ -12551,6 +12551,16 @@ PrefabInstance:
         type: 3}
       propertyPath: moveSpeed
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6888221295049646454, guid: 677e95b14d3c315408f132eefb84dd56,
+        type: 3}
+      propertyPath: jumpHeight
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6888221295049646454, guid: 677e95b14d3c315408f132eefb84dd56,
+        type: 3}
+      propertyPath: isGrounded
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 677e95b14d3c315408f132eefb84dd56, type: 3}
@@ -21560,6 +21570,10 @@ PrefabInstance:
     - target: {fileID: 172348, guid: c711992513e4e354d9d85d02d0d5b710, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 172348, guid: c711992513e4e354d9d85d02d0d5b710, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 496576, guid: c711992513e4e354d9d85d02d0d5b710, type: 3}
       propertyPath: m_LocalPosition.x
