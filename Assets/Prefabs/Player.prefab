@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 6888221295049646453}
   - component: {fileID: 6888221295049646455}
   - component: {fileID: 6888221295049646454}
+  - component: {fileID: -7928441823065590960}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -69,6 +70,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -137,7 +139,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   exploPrefab: {fileID: 400000, guid: 2ba3fe6e50ea7cf4c83a10d555ddf2e2, type: 3}
   smokePrefab: {fileID: 400000, guid: 0cb04b06304f17e4a800c12222a8bb05, type: 3}
-  speed: 50
+  mainCamera: {fileID: 0}
+  moveSpeed: 50
   increaseSizeSpeed: 0.01
   power: 100
   weight: 50
+  jumpHeight: 7
+  isGrounded: 0
+  fallMultiplier: 2.5
+  lowJumpMultiplier: 2
+--- !u!114 &-7928441823065590960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6888221295049646460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e462210ea3d27ab4da263eeafe961bf8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
