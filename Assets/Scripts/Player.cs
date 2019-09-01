@@ -77,7 +77,7 @@ public class Player : MonoBehaviour {
 				//_scale.z += 0.01f;
 				_scale *= 1.01f;
 
-				foreach(GameObject child in playerChilds) {
+				foreach (GameObject child in playerChilds) {
 					child.transform.parent = null;
 				}
 

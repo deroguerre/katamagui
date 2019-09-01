@@ -14,10 +14,10 @@ GameObject:
   - component: {fileID: 1109987725}
   - component: {fileID: 1109987726}
   - component: {fileID: 1109987721}
-  - component: {fileID: 1109987722}
   - component: {fileID: 1109987723}
   - component: {fileID: 1109987724}
   - component: {fileID: 1814002174}
+  - component: {fileID: -390833162405023183}
   m_Layer: 0
   m_Name: Bar Stool
   m_TagString: Untagged
@@ -134,22 +134,6 @@ MonoBehaviour:
   sendPreSplitMessage: 1
   sendPostSplitMessage: 1
   internalHullType: 0
---- !u!114 &1109987722
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 132774}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 39e94ca62685244b08d8464b0beb9216, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetStart: {x: 0, y: 0}
-  targetSize: {x: 1, y: 1}
-  square: 0
-  centerMeshOrigo: 0
 --- !u!114 &1109987723
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -162,7 +146,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62b9da142b71b40e6ada0cf8dc2aa245, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  requiredVelocity: 1
+  requiredVelocity: 10
   cooldownTime: 0.5
 --- !u!114 &1109987724
 MonoBehaviour:
@@ -177,6 +161,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isCollectable: 0
+  isCollected: 0
   resistance: 1
   weight: 1
 --- !u!114 &1814002174
@@ -197,3 +182,19 @@ MonoBehaviour:
   attachChildrenToPieces: 0
   maxChildToPieceDistance: 1
   addRbToDetachedChildren: 0
+--- !u!114 &-390833162405023183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 132774}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39e94ca62685244b08d8464b0beb9216, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetStart: {x: 0, y: 0}
+  targetSize: {x: 1, y: 1}
+  square: 0
+  centerMeshOrigo: 0
