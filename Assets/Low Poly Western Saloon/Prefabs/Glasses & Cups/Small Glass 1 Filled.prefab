@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2361078}
   - component: {fileID: 3466628120829715249}
   - component: {fileID: 275224363349491347}
+  - component: {fileID: 3591834253736778895}
   m_Layer: 0
   m_Name: Small Glass 1 Filled
   m_TagString: Untagged
@@ -110,3 +111,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &3591834253736778895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 136070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf2a2ae54bb441a4b80ceb65281ae021, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isCollectable: 1
+  isCollected: 0
+  shatterResistance: 1
+  stuckResistance: 1
+  earnPoints: 1

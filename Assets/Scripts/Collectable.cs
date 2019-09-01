@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class Collectable : MonoBehaviour
 {
-	public bool isCollectable = false;
+	public bool isCollectable = true;
 	public bool isCollected = false;
 	public float shatterResistance = 1;
 	public float stuckResistance = 1;
+	public float earnPoints = 1;
 
 	private Vector3 _scale;
 
@@ -31,7 +32,7 @@ public class Collectable : MonoBehaviour
 	}
 
 	private IEnumerator enableCollectable(float pResistance, float pWeight) {
-		yield return new WaitForSeconds(2);
+		yield return new WaitForSeconds(3);
 		gameObject.tag = "Collectable";
 		isCollectable = true;
 		shatterResistance = pResistance;

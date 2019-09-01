@@ -157,4 +157,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e462210ea3d27ab4da263eeafe961bf8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stuckPower: 50
+  score: 0
+  stuckPower: 5
+  xpRateDivider: 100

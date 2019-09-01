@@ -12,6 +12,9 @@ GameObject:
   - component: {fileID: 3317978}
   - component: {fileID: 2306490}
   - component: {fileID: -4050966355558811100}
+  - component: {fileID: 1924877402992706214}
+  - component: {fileID: -8068302502823241887}
+  - component: {fileID: 4054053307798289482}
   m_Layer: 0
   m_Name: Poker Table
   m_TagString: Untagged
@@ -93,3 +96,52 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: 0ee20d8ea7d914a4ba730f59fe59c977, type: 3}
+--- !u!114 &1924877402992706214
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 180970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f62b7025d7cc0442fbf846681e55cb7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  generation: 1
+  generationLimit: 3
+  cuts: 2
+  fillCut: 1
+  sendPreSplitMessage: 0
+  sendPostSplitMessage: 0
+  internalHullType: 0
+--- !u!114 &-8068302502823241887
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 180970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62b9da142b71b40e6ada0cf8dc2aa245, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  requiredVelocity: 1
+  cooldownTime: 0.5
+--- !u!114 &4054053307798289482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 180970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39e94ca62685244b08d8464b0beb9216, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetStart: {x: 0, y: 0}
+  targetSize: {x: 1, y: 1}
+  square: 0
+  centerMeshOrigo: 0
