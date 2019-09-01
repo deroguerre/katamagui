@@ -18,14 +18,28 @@ namespace ShatterToolkit.Helpers {
 			if (timeSinceInstantiated >= cooldownTime) {
 				if (collision.relativeVelocity.magnitude >= requiredVelocity) {
 
-					//Check if collectable component exist and the object is collectable
-					if (gameObject.GetComponent<Collectable>() != null) {
-						if (gameObject.GetComponent<Collectable>().isCollectable == false) {
+
+					if (collision.gameObject.tag == "Player") {
+
+						Debug.Log("hit from player");
+						if (gameObject.GetComponent<Collectable>().stuckResistance > collision.gameObject.GetComponent<Player>().stuckPower) {
 							StartShatter(collision);
 						}
-					} else {
+
+					}
+
+					if (collision.gameObject.tag != "Player") {
 						StartShatter(collision);
 					}
+
+					//Check if collectable component exist and the object is collectable
+					//if (gameObject.GetComponent<Collectable>() != null) {
+					//	if (gameObject.GetComponent<Collectable>().isCollectable == false) {
+					//		StartShatter(collision);
+					//	}
+					//} else {
+					//	StartShatter(collision);
+					//}
 				}
 			}
 		}

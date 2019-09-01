@@ -291,8 +291,8 @@ namespace ShatterToolkit {
 
 			if (gameObject.GetComponent<Collectable>() != null) {
 
-				newResistance = gameObject.GetComponent<Collectable>().resistance / newHulls.Count;
-				newWeight = gameObject.GetComponent<Collectable>().weight / newHulls.Count;
+				newResistance = gameObject.GetComponent<Collectable>().shatterResistance / newHulls.Count;
+				newWeight = gameObject.GetComponent<Collectable>().stuckResistance / newHulls.Count;
 			}
 
 			// Create new game objects

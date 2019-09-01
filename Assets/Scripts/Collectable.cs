@@ -6,8 +6,8 @@ public class Collectable : MonoBehaviour
 {
 	public bool isCollectable = false;
 	public bool isCollected = false;
-	public float resistance = 1;
-	public float weight = 1;
+	public float shatterResistance = 1;
+	public float stuckResistance = 1;
 
 	private Vector3 _scale;
 
@@ -34,8 +34,8 @@ public class Collectable : MonoBehaviour
 		yield return new WaitForSeconds(2);
 		gameObject.tag = "Collectable";
 		isCollectable = true;
-		resistance = pResistance;
-		weight = pWeight;
+		shatterResistance = pResistance;
+		stuckResistance = pWeight;
 		//Destroy(gameObject.GetComponent<Rigidbody>());
 	}
 }

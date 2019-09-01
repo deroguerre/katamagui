@@ -3,15 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Player : MonoBehaviour {
-	public float increaseSizeSpeed = 0.05f;
-	public float power = 1;
-	public float weight = 3;
+
+	public float stuckPower = 3;
 
 	private Vector3 _scale = new Vector3(1, 1, 1);
-	private Vector3 _initialScale = new Vector3(4, 4, 4);
 
-	List<GameObject> playerChilds = new List<GameObject>();
-
+	private List<GameObject> playerChilds = new List<GameObject>();
 
 	// Start is called before the first frame update
 	void Start() {
@@ -30,25 +27,18 @@ public class Player : MonoBehaviour {
 
 		if (other.gameObject.GetComponent<Collectable>() != null) {
 
-			float resistance = other.gameObject.GetComponent<Collectable>().resistance;
-			float collisionWeight = other.gameObject.GetComponent<Collectable>().weight;
+			float shatterResistance = other.gameObject.GetComponent<Collectable>().shatterResistance;
+			float stuckResistance = other.gameObject.GetComponent<Collectable>().stuckResistance;
 
 			bool isCollectable = other.gameObject.GetComponent<Collectable>().isCollectable;
 
 			//stick to player
-			if (collisionWeight < weight && isCollectable) {
+			if (stuckResistance < stuckPower && isCollectable) {
 
-				//Debug.Log("Stuck");
-
-				other.collider.isTrigger = true;
+				if(other.gameObject.GetComponent<MeshCollider>().convex) {
+					other.collider.isTrigger = true;
+				}
 				Destroy(other.rigidbody);
-
-				//List<Component> componentsList = new List<Component>();
-				//componentsList.Add(gameObject.GetComponent<ShatterToolkit.Helpers.HierarchyHandler>());
-				//componentsList.Add(gameObject.GetComponent<ShatterToolkit.Helpers.ShatterOnCollision>());
-				//componentsList.Add(gameObject.GetComponent<ShatterToolkit.TargetUvMapper>());
-				//componentsList.Add(gameObject.GetComponent<ShatterToolkit.ShatterTool>());
-				//componentsList.Add(gameObject.GetComponent< MeshCollider>());
 
 				if (other.gameObject.GetComponent<ShatterToolkit.Helpers.HierarchyHandler>() != null)
 					other.gameObject.GetComponent<ShatterToolkit.Helpers.HierarchyHandler>().enabled = false;

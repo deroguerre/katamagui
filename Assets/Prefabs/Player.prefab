@@ -140,11 +140,8 @@ MonoBehaviour:
   exploPrefab: {fileID: 400000, guid: 2ba3fe6e50ea7cf4c83a10d555ddf2e2, type: 3}
   smokePrefab: {fileID: 400000, guid: 0cb04b06304f17e4a800c12222a8bb05, type: 3}
   mainCamera: {fileID: 0}
-  moveSpeed: 50
-  increaseSizeSpeed: 0.01
-  power: 100
-  weight: 50
-  jumpHeight: 7
+  moveSpeed: 30
+  jumpHeight: 10
   isGrounded: 0
   fallMultiplier: 2.5
   lowJumpMultiplier: 2
@@ -160,3 +157,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e462210ea3d27ab4da263eeafe961bf8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stuckPower: 50

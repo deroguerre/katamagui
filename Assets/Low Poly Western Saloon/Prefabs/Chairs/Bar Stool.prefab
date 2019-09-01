@@ -162,8 +162,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isCollectable: 0
   isCollected: 0
-  resistance: 1
-  weight: 1
+  shatterResistance: 10
+  stuckResistance: 10
 --- !u!114 &1814002174
 MonoBehaviour:
   m_ObjectHideFlags: 0
