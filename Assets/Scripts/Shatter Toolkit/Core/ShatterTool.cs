@@ -298,6 +298,13 @@ namespace ShatterToolkit {
 			// Create new game objects
 			newGameObjects = new GameObject[newHulls.Count];
 
+
+			GameObject debris = null;
+
+			if (GameObject.Find("Debris") != null) {
+				debris = GameObject.Find("Debris");
+			}
+
 			for (int i = 0; i < newHulls.Count; i++) {
 				IHull newHull = newHulls[i];
 				Mesh newMesh = newMeshes[i];
@@ -341,6 +348,12 @@ namespace ShatterToolkit {
 
 				// Update properties
 				newShatterTool.CalculateCenter();
+
+				if (debris != null) {
+					newGameObject.transform.SetParent(debris.transform);
+				} else {
+					Debug.Log("debris null");
+				}
 
 				if (newGameObject.GetComponent<Collectable>() != null) {
 					newGameObject.GetComponent<Collectable>().enable(newResistance, newWeight);

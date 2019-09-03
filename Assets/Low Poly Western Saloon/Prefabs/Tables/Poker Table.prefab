@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 477070}
   - component: {fileID: 3317978}
   - component: {fileID: 2306490}
-  - component: {fileID: -4050966355558811100}
   - component: {fileID: 1924877402992706214}
   - component: {fileID: -8068302502823241887}
   - component: {fileID: 4054053307798289482}
+  - component: {fileID: 4974204756356707554}
   m_Layer: 0
   m_Name: Poker Table
   m_TagString: Untagged
@@ -82,20 +82,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &-4050966355558811100
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 180970}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 4300000, guid: 0ee20d8ea7d914a4ba730f59fe59c977, type: 3}
 --- !u!114 &1924877402992706214
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -145,3 +131,17 @@ MonoBehaviour:
   targetSize: {x: 1, y: 1}
   square: 0
   centerMeshOrigo: 0
+--- !u!64 &4974204756356707554
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 180970}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300000, guid: 0ee20d8ea7d914a4ba730f59fe59c977, type: 3}

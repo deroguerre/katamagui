@@ -23,6 +23,12 @@ namespace ShatterToolkit.Helpers {
 
 						Debug.Log("hit from player");
 						if (gameObject.GetComponent<Collectable>().stuckResistance > collision.gameObject.GetComponent<Player>().stuckPower) {
+							//if (gameObject.GetComponent<MeshCollider>().convex == false) {
+							//	gameObject.GetComponent<MeshCollider>().convex = true;
+							//}
+							//if (gameObject.GetComponent<Rigidbody>().isKinematic == true) {
+							//	gameObject.GetComponent<Rigidbody>().isKinematic = false;
+							//}
 							StartShatter(collision);
 						}
 
