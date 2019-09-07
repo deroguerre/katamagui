@@ -6209,7 +6209,7 @@ MonoBehaviour:
       sensibility: 1
       speedScrool: 0.3
       speedYAxis: 0.5
-      minDistance: 7
+      minDistance: 3
       maxDistance: 30
       minAngleY: 0
       maxAngleY: 80
@@ -12977,6 +12977,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6888221295049646456, guid: 677e95b14d3c315408f132eefb84dd56,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6888221295049646456, guid: 677e95b14d3c315408f132eefb84dd56,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6888221295049646456, guid: 677e95b14d3c315408f132eefb84dd56,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 6888221295049646458, guid: 677e95b14d3c315408f132eefb84dd56,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -13718,7 +13733,7 @@ Transform:
   m_GameObject: {fileID: 450995035}
   m_LocalRotation: {x: 0, y: -1, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 6, y: 6, z: 6}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 811852545}
   - {fileID: 336029113}
@@ -24416,7 +24431,7 @@ Transform:
   m_GameObject: {fileID: 1058835086}
   m_LocalRotation: {x: 0, y: -1, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 6, y: 6, z: 6}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1676566767}
   - {fileID: 200306598}
@@ -26995,11 +27010,11 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
-    - target: {fileID: 139040, guid: b228bf7b5a01ae346b5d084c3cbe9f68, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 112558, guid: b228bf7b5a01ae346b5d084c3cbe9f68, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 121064, guid: b228bf7b5a01ae346b5d084c3cbe9f68, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
@@ -27014,6 +27029,10 @@ PrefabInstance:
     - target: {fileID: 154718, guid: b228bf7b5a01ae346b5d084c3cbe9f68, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 139040, guid: b228bf7b5a01ae346b5d084c3cbe9f68, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 498552, guid: b228bf7b5a01ae346b5d084c3cbe9f68, type: 3}
       propertyPath: m_LocalPosition.x
@@ -27052,10 +27071,6 @@ PrefabInstance:
       value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 153710, guid: b228bf7b5a01ae346b5d084c3cbe9f68, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
-    - target: {fileID: 121064, guid: b228bf7b5a01ae346b5d084c3cbe9f68, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
@@ -27955,7 +27970,7 @@ Transform:
   m_GameObject: {fileID: 1436552633}
   m_LocalRotation: {x: 0, y: -1, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 6, y: 6, z: 6}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1614044879}
   - {fileID: 1612267469}

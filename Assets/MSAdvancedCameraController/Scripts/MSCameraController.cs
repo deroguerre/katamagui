@@ -111,7 +111,7 @@ public class MSACC_SettingsCameraOrbital {
 	public float speedYAxis = 0.5f;
 
 	[Header("Limits")]
-	[Range(3.0f,20.0f)][Tooltip("In this variable, you can set the minimum distance that the orbital camera can stay from the player.")]
+	[Range(0.1f,20.0f)][Tooltip("In this variable, you can set the minimum distance that the orbital camera can stay from the player.")]
 	public float minDistance = 5.0f;
 	[Range(20.0f,1000.0f)][Tooltip("In this variable, you can set the maximum distance that the orbital camera can stay from the player.")]
 	public float maxDistance = 50.0f;
