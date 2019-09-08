@@ -28,7 +28,6 @@ public class PlayerController : MonoBehaviour {
 	void Update() {
 
 		if (Input.GetButtonDown("Jump")) {
-			Debug.Log("Jump");
 			thisRigibody.AddForce(Vector3.up * jumpHeight * 100);
 		}
 
@@ -41,11 +40,11 @@ public class PlayerController : MonoBehaviour {
 		//Debug.Log(Input.GetAxis("Dash"));
 
 		if (Input.GetAxis("Dash") < -0.1f) {
-			Debug.Log("Left Dash");
+			//Debug.Log("Left Dash");
 		}
 
 		if (Input.GetAxis("Dash") > 0.1f) {
-			Debug.Log("Right Dash");
+			//Debug.Log("Right Dash");
 			moveSpeed = 100f;
 			//thisRigibody.AddForce(Vector3.up * jumpHeight * 100);
 		} else {
@@ -82,17 +81,17 @@ public class PlayerController : MonoBehaviour {
 		}
 	}
 
-	private void OnCollisionEnter(Collision other) {
+	//private void OnCollisionEnter(Collision other) {
 
-		if (other.gameObject.tag == "Ground") {
-			isGrounded = true;
-		}
-	}
+	//	if (other.gameObject.tag == "Ground") {
+	//		isGrounded = true;
+	//	}
+	//}
 
-	private void OnCollisionExit(Collision other) {
-		if (other.gameObject.tag == "Ground") {
-			isGrounded = false;
-		}
-	}
+	//private void OnCollisionExit(Collision other) {
+	//	if (other.gameObject.tag == "Ground") {
+	//		isGrounded = false;
+	//	}
+	//}
 
 }

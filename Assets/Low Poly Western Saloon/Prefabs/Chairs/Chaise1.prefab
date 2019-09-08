@@ -12,12 +12,11 @@ GameObject:
   - component: {fileID: 2091499982970062362}
   - component: {fileID: 2091499982971208438}
   - component: {fileID: 2091499984077787477}
+  - component: {fileID: 2091499984077787476}
   - component: {fileID: 2091499984077787473}
   - component: {fileID: 2091499984077787475}
-  - component: {fileID: 2091499984077787476}
-  - component: {fileID: 2091499983303309606}
   - component: {fileID: 7464148381548409577}
-  - component: {fileID: 6323141260928314497}
+  - component: {fileID: 2091499983303309606}
   m_Layer: 0
   m_Name: Chaise1
   m_TagString: Untagged
@@ -102,6 +101,22 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &2091499984077787476
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2091499982968981118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf2a2ae54bb441a4b80ceb65281ae021, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isCollectable: 1
+  shatterResistance: 5
+  stuckResistance: 50
+  earnPoints: 5
 --- !u!114 &2091499984077787473
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -115,7 +130,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   generation: 1
-  generationLimit: 3
+  generationLimit: 2
   cuts: 5
   fillCut: 1
   sendPreSplitMessage: 1
@@ -135,7 +150,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   requiredVelocity: 5
   cooldownTime: 0.5
---- !u!114 &2091499984077787476
+--- !u!114 &7464148381548409577
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -144,14 +159,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 2091499982968981118}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf2a2ae54bb441a4b80ceb65281ae021, type: 3}
+  m_Script: {fileID: 11500000, guid: 39e94ca62685244b08d8464b0beb9216, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isCollectable: 1
-  isCollected: 0
-  shatterResistance: 5
-  stuckResistance: 50
-  earnPoints: 5
+  targetStart: {x: 0, y: 0}
+  targetSize: {x: 1, y: 1}
+  square: 0
+  centerMeshOrigo: 0
 --- !u!114 &2091499983303309606
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -170,37 +184,6 @@ MonoBehaviour:
   attachChildrenToPieces: 0
   maxChildToPieceDistance: 1
   addRbToDetachedChildren: 0
---- !u!114 &7464148381548409577
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2091499982968981118}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 39e94ca62685244b08d8464b0beb9216, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetStart: {x: 0, y: 0}
-  targetSize: {x: 1, y: 1}
-  square: 0
-  centerMeshOrigo: 0
---- !u!114 &6323141260928314497
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2091499982968981118}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 56e094b691363ee41add00694666a133, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shouldMerge: 1
-  createColliderChildGameObject: 1
-  boxesPerEdge: 30
 --- !u!1 &5210152115695426989
 GameObject:
   m_ObjectHideFlags: 0

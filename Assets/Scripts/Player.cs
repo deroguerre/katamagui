@@ -10,8 +10,11 @@ public class Player : MonoBehaviour {
 	private float _score = 0;
 	private float _level = 0;
 	private Vector3 _scale = new Vector3(1, 1, 1);
-	private List<GameObject> debrisList = new List<GameObject>();
+	private List<GameObject> collectedDebrisList = new List<GameObject>();
 
+	private void Update() {
+
+	}
 
 	//Stuck On Collision
 	private void OnCollisionEnter(Collision other) {
@@ -37,7 +40,7 @@ public class Player : MonoBehaviour {
 
 				//set transform of collider to player
 				other.gameObject.GetComponent<Transform>().SetParent(gameObject.GetComponent<Transform>());
-				debrisList.Add(other.gameObject);
+				collectedDebrisList.Add(other.gameObject);
 
 				//calculate score/level
 				_score += other.gameObject.GetComponent<Collectable>().earnPoints;
@@ -50,14 +53,14 @@ public class Player : MonoBehaviour {
 					_scale.z = _level;
 
 					//set null the debris of player before scale it
-					foreach (GameObject debris in debrisList) {
+					foreach (GameObject debris in collectedDebrisList) {
 						debris.transform.parent = null;
 					}
 
 					gameObject.transform.localScale = _scale;
 					//transform.localScale = Vector3.Lerp(transform.localScale, _scale, 2.0f * Time.deltaTime);
 
-					foreach (GameObject child in debrisList) {
+					foreach (GameObject child in collectedDebrisList) {
 						child.transform.parent = gameObject.transform;
 					}
 				}

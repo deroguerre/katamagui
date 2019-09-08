@@ -15,9 +15,8 @@ GameObject:
   - component: {fileID: 4225055596741754947}
   - component: {fileID: 394224562730113446}
   - component: {fileID: 1275218108989617202}
-  - component: {fileID: 5293997340102231322}
   - component: {fileID: 2701361266056577817}
-  - component: {fileID: 9024560514904576623}
+  - component: {fileID: 5293997340102231322}
   m_Layer: 0
   m_Name: Chair 2
   m_TagString: Untagged
@@ -151,6 +150,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   requiredVelocity: 1
   cooldownTime: 0.5
+--- !u!114 &2701361266056577817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 183186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39e94ca62685244b08d8464b0beb9216, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetStart: {x: 0, y: 0}
+  targetSize: {x: 1, y: 1}
+  square: 0
+  centerMeshOrigo: 0
 --- !u!114 &5293997340102231322
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -169,37 +184,6 @@ MonoBehaviour:
   attachChildrenToPieces: 0
   maxChildToPieceDistance: 1
   addRbToDetachedChildren: 0
---- !u!114 &2701361266056577817
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 183186}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 39e94ca62685244b08d8464b0beb9216, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetStart: {x: 0, y: 0}
-  targetSize: {x: 1, y: 1}
-  square: 0
-  centerMeshOrigo: 0
---- !u!114 &9024560514904576623
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 183186}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 56e094b691363ee41add00694666a133, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shouldMerge: 1
-  createColliderChildGameObject: 1
-  boxesPerEdge: 30
 --- !u!1 &1362607319572087924
 GameObject:
   m_ObjectHideFlags: 0

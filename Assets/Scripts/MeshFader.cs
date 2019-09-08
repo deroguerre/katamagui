@@ -4,13 +4,15 @@ using UnityEngine;
 
 public class MeshFader : MonoBehaviour
 {
+	public bool startFade = false;
+
 	private bool fadeOut = false;
 
 	void Update() {
 		if (fadeOut) return;
 
 		// wait until rigibody is spleeping
-		if (GetComponent<Rigidbody>().IsSleeping()) {
+		if (startFade) {
 			fadeOut = true;
 			StartCoroutine(FadeOut());
 		}
@@ -20,6 +22,9 @@ public class MeshFader : MonoBehaviour
 		float fadeTime = 2.0f;
 		var rend = GetComponent<Renderer>();
 
+		//set material to transparent
+		//rend.material.SetFloat("_Mode", 2);
+
 		var startColor = Color.white;
 		var endColor = new Color(1, 1, 1, 0);
 
@@ -27,6 +32,6 @@ public class MeshFader : MonoBehaviour
 			rend.material.color = Color.Lerp(startColor, endColor, t / fadeTime);
 			yield return null;
 		}
-		Destroy(gameObject);
+		//Destroy(gameObject);
 	}
 }

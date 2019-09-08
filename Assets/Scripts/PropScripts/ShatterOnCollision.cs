@@ -19,8 +19,6 @@ namespace ShatterToolkit.Helpers {
 			if (timeSinceInstantiated >= cooldownTime) {
 				if (collision.relativeVelocity.magnitude >= requiredVelocity) {
 
-					//PauseEditor();
-
 					if (collision.gameObject.tag == "Player") {
 
 						//Debug.Log("hit from player");

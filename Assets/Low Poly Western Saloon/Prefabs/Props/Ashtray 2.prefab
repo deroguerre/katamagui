@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 3305580}
   - component: {fileID: 2316216}
   - component: {fileID: 4791043854559128095}
-  - component: {fileID: -5157564750370407291}
   - component: {fileID: 578629335685813805}
+  - component: {fileID: -5157564750370407291}
   m_Layer: 0
   m_Name: Ashtray 2
   m_TagString: Untagged
@@ -95,23 +95,6 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: 0e799e11bd73cb94b95c5eafe8221b94, type: 3}
---- !u!114 &-5157564750370407291
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 128516}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf2a2ae54bb441a4b80ceb65281ae021, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isCollectable: 1
-  isCollected: 0
-  shatterResistance: 1
-  stuckResistance: 1
-  earnPoints: 1
 --- !u!54 &578629335685813805
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -128,3 +111,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &-5157564750370407291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 128516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf2a2ae54bb441a4b80ceb65281ae021, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isCollectable: 1
+  shatterResistance: 1
+  stuckResistance: 1
+  earnPoints: 1

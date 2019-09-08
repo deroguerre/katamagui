@@ -596,7 +596,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isCollectable: 1
-  isCollected: 0
   shatterResistance: 1
   stuckResistance: 50
   earnPoints: 1
@@ -1431,6 +1430,7 @@ GameObject:
   - component: {fileID: 443246}
   - component: {fileID: 3334006}
   - component: {fileID: 2307238}
+  - component: {fileID: 6385772690659449089}
   m_Layer: 0
   m_Name: railing_1
   m_TagString: Untagged
@@ -1498,6 +1498,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &6385772690659449089
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 178942}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300030, guid: 7b23fcb368491cf4ca8fcd85d12bb784, type: 3}
 --- !u!1 &179862
 GameObject:
   m_ObjectHideFlags: 0

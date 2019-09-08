@@ -9,11 +9,11 @@ namespace ShatterToolkit.Helpers
     {
         public bool attachPieceToParent = true;
         public float maxPieceToParentDistance = 1.0f;
-        public bool addRbToDetachedPieces = true;
+        public bool addRbToDetachedPieces = false;
         
-        public bool attachChildrenToPieces = true;
+        public bool attachChildrenToPieces = false;
         public float maxChildToPieceDistance = 1.0f;
-        public bool addRbToDetachedChildren = true;
+        public bool addRbToDetachedChildren = false;
         
         protected Transform parent;
         protected Transform[] children;
