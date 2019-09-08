@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 6888221295049646455}
   - component: {fileID: 6888221295049646454}
   - component: {fileID: -7928441823065590960}
+  - component: {fileID: 6441114677751521489}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -157,6 +158,107 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e462210ea3d27ab4da263eeafe961bf8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: 0
   stuckPower: 5
   xpRateDivider: 100
+--- !u!114 &6441114677751521489
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6888221295049646460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33c05d7cc08194f468ef623d3dd60f01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  cameras:
+  - _camera: {fileID: 0}
+    rotationType: 3
+    volume: 1
+  CameraSettings:
+    inputMouseX: Mouse X
+    inputMouseY: Mouse Y
+    inputMouseScrollWheel: Mouse ScrollWheel
+    cameraSwitchKey: 99
+    camerasUpdateMode: 2
+    ajustTheLayers: 1
+    firstPerson:
+      sensibilityX: 10
+      sensibilityY: 10
+      speedScroolZoom: 0.5
+      horizontalAngle: 65
+      verticalAngle: 20
+      maxScroolZoom: 30
+      rotateWhenClick: 0
+      keyToRotate: mouse 0
+      invertXInput: 0
+      invertYInput: 0
+    followPlayer:
+      ignoreCollision: 0
+      displacementSpeed: 3
+      customLookAt: 0
+      spinSpeedCustomLookAt: 15
+      useScrool: 0
+      scroolSpeed: 1
+      minDistance: 7
+      maxDistance: 40
+    orbital:
+      sensibility: 1
+      speedScrool: 0.3
+      speedYAxis: 0.5
+      minDistance: 7
+      maxDistance: 30
+      minAngleY: 0
+      maxAngleY: 80
+      ignoreCollision: 1
+      rotateWhenClick: 0
+      keyToRotate: mouse 0
+      invertXInput: 0
+      invertYInput: 0
+    OrbitalThatFollows:
+      displacementSpeed: 5
+      customLookAt: 0
+      spinSpeedCustomLookAt: 15
+      sensibility: 0.8
+      speedScrool: 1
+      speedYAxis: 0.5
+      minDistance: 5
+      maxDistance: 50
+      minAngleY: 0
+      maxAngleY: 80
+      rotateWhenClick: 0
+      keyToRotate: mouse 0
+      invertXInput: 0
+      invertYInput: 0
+      ResetControlType: 0
+      resetKey: 122
+      timeToReset: 8
+      ignoreCollision: 0
+    ETS_StyleCamera:
+      sensibilityX: 10
+      sensibilityY: 10
+      ETS_CameraShift: 1
+      maxScroolZoom: 30
+      speedScroolZoom: 0.5
+      rotateWhenClick: 0
+      keyToRotate: mouse 0
+      invertXInput: 0
+      invertYInput: 0
+    FlyCamera_OnlyWindows:
+      horizontalMove: Horizontal
+      verticalMove: Vertical
+      speedKeyCode: 304
+      moveUp: 101
+      moveDown: 113
+      sensibilityX: 10
+      sensibilityY: 10
+      movementSpeed: 20
+      invertXInput: 0
+      invertYInput: 0
+  _horizontalInputMSACC: 0
+  _verticalInputMSACC: 0
+  _scrollInputMSACC: 0
+  _enableMobileInputs: 0
+  _mobileInputsIndex: 0

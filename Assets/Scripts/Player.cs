@@ -26,12 +26,14 @@ public class Player : MonoBehaviour {
 			//stick to player
 			if (stuckResistance < stuckPower && isCollectable) {
 
-				if (other.gameObject.GetComponent<MeshCollider>().convex) {
+				if (other.gameObject.GetComponent<MeshCollider>() != null && other.gameObject.GetComponent<MeshCollider>().convex) {
 					other.collider.isTrigger = true;
-				}
+				} 
 
 				//disable useless components
-				disableComponent(other.gameObject);
+				//disableComponent(other.gameObject);
+				destroyComponent(other.gameObject);
+
 
 				//set transform of collider to player
 				other.gameObject.GetComponent<Transform>().SetParent(gameObject.GetComponent<Transform>());
@@ -41,7 +43,7 @@ public class Player : MonoBehaviour {
 				_score += other.gameObject.GetComponent<Collectable>().earnPoints;
 				_level = 1 + (float)Mathf.Round((_score / xpRateDivider) * 10f) / 10f;
 
-				//set scale of player without effect debris
+				//set scale of player without affecting debris
 				if (_level > _scale.x) {
 					_scale.x = _level;
 					_scale.y = _level;
@@ -81,8 +83,34 @@ public class Player : MonoBehaviour {
 		if (go.GetComponent<ShatterToolkit.ShatterTool>() != null)
 			go.GetComponent<ShatterToolkit.ShatterTool>().enabled = false;
 
-		if (go.GetComponent<MeshCollider>() != null)
-			go.GetComponent<MeshCollider>().enabled = false;
+		//if (go.GetComponent<MeshCollider>() != null)
+		//	go.GetComponent<MeshCollider>().enabled = false;
+
+		if (go.GetComponent<Collider>() != null)
+			go.GetComponent<Collider>().enabled = false;
+	}
+
+	private void destroyComponent(GameObject go) {
+
+		Destroy(go.GetComponent<Rigidbody>());
+
+		if (go.GetComponent<ShatterToolkit.Helpers.HierarchyHandler>() != null)
+			Destroy(go.GetComponent<ShatterToolkit.Helpers.HierarchyHandler>());
+
+		if (go.GetComponent<ShatterToolkit.Helpers.ShatterOnCollision>() != null)
+		Destroy(go.GetComponent<ShatterToolkit.Helpers.ShatterOnCollision>());
+
+		if (go.GetComponent<ShatterToolkit.TargetUvMapper>() != null)
+			Destroy(go.GetComponent<ShatterToolkit.TargetUvMapper>());
+
+		if (go.GetComponent<ShatterToolkit.ShatterTool>() != null)
+			Destroy(go.GetComponent<ShatterToolkit.ShatterTool>());
+
+		if (go.GetComponent<Collider>() != null)
+			Destroy(go.GetComponent<Collider>());
+
+		if (go.GetComponent<Collectable>() != null)
+			Destroy(go.GetComponent<Collectable>());
 	}
 
 	void OnGUI() {

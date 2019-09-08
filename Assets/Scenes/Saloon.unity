@@ -6418,7 +6418,7 @@ PrefabInstance:
     - target: {fileID: 2091499982969256232, guid: 6c72f784a75c66b4895347fb9e3f7625,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.263
+      value: 2.482
       objectReference: {fileID: 0}
     - target: {fileID: 2091499982969256232, guid: 6c72f784a75c66b4895347fb9e3f7625,
         type: 3}
@@ -6622,114 +6622,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 168279661}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &169356369 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6888221295049646460, guid: 677e95b14d3c315408f132eefb84dd56,
-    type: 3}
-  m_PrefabInstance: {fileID: 344055159}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &169356370
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 169356369}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33c05d7cc08194f468ef623d3dd60f01, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 970401845}
-  cameras:
-  - _camera: {fileID: 1857830974}
-    rotationType: 3
-    volume: 1
-  CameraSettings:
-    inputMouseX: Mouse X
-    inputMouseY: Mouse Y
-    inputMouseScrollWheel: Mouse ScrollWheel
-    cameraSwitchKey: 99
-    camerasUpdateMode: 2
-    ajustTheLayers: 1
-    firstPerson:
-      sensibilityX: 10
-      sensibilityY: 10
-      speedScroolZoom: 0.5
-      horizontalAngle: 65
-      verticalAngle: 20
-      maxScroolZoom: 30
-      rotateWhenClick: 0
-      keyToRotate: mouse 0
-      invertXInput: 0
-      invertYInput: 0
-    followPlayer:
-      ignoreCollision: 0
-      displacementSpeed: 3
-      customLookAt: 0
-      spinSpeedCustomLookAt: 15
-      useScrool: 0
-      scroolSpeed: 1
-      minDistance: 7
-      maxDistance: 40
-    orbital:
-      sensibility: 1
-      speedScrool: 0.3
-      speedYAxis: 0.5
-      minDistance: 7
-      maxDistance: 30
-      minAngleY: 0
-      maxAngleY: 80
-      ignoreCollision: 1
-      rotateWhenClick: 0
-      keyToRotate: mouse 0
-      invertXInput: 0
-      invertYInput: 0
-    OrbitalThatFollows:
-      displacementSpeed: 5
-      customLookAt: 0
-      spinSpeedCustomLookAt: 15
-      sensibility: 0.8
-      speedScrool: 1
-      speedYAxis: 0.5
-      minDistance: 5
-      maxDistance: 50
-      minAngleY: 0
-      maxAngleY: 80
-      rotateWhenClick: 0
-      keyToRotate: mouse 0
-      invertXInput: 0
-      invertYInput: 0
-      ResetControlType: 0
-      resetKey: 122
-      timeToReset: 8
-      ignoreCollision: 0
-    ETS_StyleCamera:
-      sensibilityX: 10
-      sensibilityY: 10
-      ETS_CameraShift: 1
-      maxScroolZoom: 30
-      speedScroolZoom: 0.5
-      rotateWhenClick: 0
-      keyToRotate: mouse 0
-      invertXInput: 0
-      invertYInput: 0
-    FlyCamera_OnlyWindows:
-      horizontalMove: Horizontal
-      verticalMove: Vertical
-      speedKeyCode: 304
-      moveUp: 101
-      moveDown: 113
-      sensibilityX: 10
-      sensibilityY: 10
-      movementSpeed: 20
-      invertXInput: 0
-      invertYInput: 0
-  _horizontalInputMSACC: 0
-  _verticalInputMSACC: 0
-  _scrollInputMSACC: 0
-  _enableMobileInputs: 0
-  _mobileInputsIndex: 0
 --- !u!1001 &169841758
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13921,6 +13813,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6441114677751521489, guid: 677e95b14d3c315408f132eefb84dd56,
+        type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 970401845}
+    - target: {fileID: 6441114677751521489, guid: 677e95b14d3c315408f132eefb84dd56,
+        type: 3}
+      propertyPath: cameras.Array.data[0]._camera
+      value: 
+      objectReference: {fileID: 1857830974}
     - target: {fileID: 6888221295049646460, guid: 677e95b14d3c315408f132eefb84dd56,
         type: 3}
       propertyPath: m_Name
@@ -20243,6 +20145,14 @@ PrefabInstance:
       propertyPath: isCollectable
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1109987721, guid: 6457db0c5ca677b43b5554227beccd7c, type: 3}
+      propertyPath: cuts
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1109987721, guid: 6457db0c5ca677b43b5554227beccd7c, type: 3}
+      propertyPath: generationLimit
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6457db0c5ca677b43b5554227beccd7c, type: 3}
 --- !u!4 &516156734 stripped
@@ -24440,33 +24350,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c711992513e4e354d9d85d02d0d5b710, type: 3}
---- !u!1 &831105601 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 183186, guid: 9618602419689da428aa5367097d83df,
-    type: 3}
-  m_PrefabInstance: {fileID: 1852468436}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &831105602 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 423362, guid: 9618602419689da428aa5367097d83df,
     type: 3}
   m_PrefabInstance: {fileID: 1852468436}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &831105603
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 831105601}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 56e094b691363ee41add00694666a133, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shouldMerge: 1
-  createColliderChildGameObject: 1
-  boxesPerEdge: 30
 --- !u!1001 &831699003
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -52617,7 +52506,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isCollectable: 1
-  isCollected: 0
   shatterResistance: 1
   stuckResistance: 30
   earnPoints: 1
