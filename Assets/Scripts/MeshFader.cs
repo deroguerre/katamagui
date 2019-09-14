@@ -5,7 +5,6 @@ using UnityEngine;
 public class MeshFader : MonoBehaviour
 {
 	public bool startFade = false;
-
 	private bool fadeOut = false;
 
 	void Update() {
@@ -23,7 +22,7 @@ public class MeshFader : MonoBehaviour
 		var rend = GetComponent<Renderer>();
 
 		//set material to transparent
-		//rend.material.SetFloat("_Mode", 2);
+		StandardShaderUtils.ChangeRenderMode(rend.material, StandardShaderUtils.BlendMode.Fade);
 
 		var startColor = Color.white;
 		var endColor = new Color(1, 1, 1, 0);
@@ -32,6 +31,6 @@ public class MeshFader : MonoBehaviour
 			rend.material.color = Color.Lerp(startColor, endColor, t / fadeTime);
 			yield return null;
 		}
-		//Destroy(gameObject);
+		Destroy(gameObject);
 	}
 }

@@ -39,12 +39,15 @@ namespace ShatterToolkit.Helpers {
 
 		public void StartShatter(Collision collision) {
 
-			if (gameObject.GetComponent<Rigidbody>().isKinematic) {
-				gameObject.GetComponent<Rigidbody>().isKinematic = false;
+			if (gameObject.GetComponent<Rigidbody>() != null) {
+				if (gameObject.GetComponent<Rigidbody>().isKinematic) {
+					gameObject.GetComponent<Rigidbody>().isKinematic = false;
+				}
+			} else {
+				gameObject.AddComponent<Rigidbody>();
 			}
 
-
-			if(gameObject.GetComponent<MeshCollider>() == null) {
+			if (gameObject.GetComponent<MeshCollider>() == null) {
 				gameObject.AddComponent<MeshCollider>();
 			}
 			gameObject.GetComponent<MeshCollider>().convex = true;
@@ -60,6 +63,10 @@ namespace ShatterToolkit.Helpers {
 
 					break;
 				}
+			}
+
+			if(gameObject.GetComponent<BoxCollider>() != null) {
+				Destroy(gameObject.GetComponent<BoxCollider>());
 			}
 
 			if (gameObject.transform.Find("Colliders") != null) {

@@ -39,6 +39,17 @@ public class PlayerController : MonoBehaviour {
 
 		//Debug.Log(Input.GetAxis("Dash"));
 
+		if (Input.GetButtonDown("LB")) {
+			Debug.Log("LB pressed");
+			Camera.main.fieldOfView -= 10;
+			//cameras[index]._camera.fieldOfView -= _scrollInputMSACC * CameraSettings.firstPerson.speedScroolZoom * 50.0f;
+		}
+
+		if (Input.GetButtonDown("RB")) {
+			Debug.Log("RB pressed");
+			Camera.main.fieldOfView += 10;
+		}
+
 		if (Input.GetAxis("Dash") < -0.1f) {
 			//Debug.Log("Left Dash");
 		}
