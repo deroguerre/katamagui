@@ -4,14 +4,16 @@ using UnityEngine;
 
 public class Player : MonoBehaviour {
 
-	public float stuckPower = 3;
-	public float xpRateDivider = 100;
+	public float stuckPower = 5;
+	public float shatterPower = 3;
 
 	private float nextActionTime = 0.0f;
 	public float period = 0.1f;
 	public int maxDebrisCollected = 100;
 
 	private float _score = 0;
+	private float _scoreStep = 10;
+	private float _scoreToNextLevel = 100;
 	private float _level = 0;
 	private Vector3 _scale = new Vector3(1, 1, 1);
 	//private List<GameObject> _collectedDebrisList = new List<GameObject>();
@@ -19,10 +21,10 @@ public class Player : MonoBehaviour {
 
 	private void Update() {
 
-		//fade out collected debris fater x seconds
+		//fade out collected debris after x seconds
 		if (Time.time > nextActionTime) {
 			nextActionTime += period;
-			Debug.Log("Next Action !!");
+			//Debug.Log("Next Action !!");
 			while(_collectedDebrisQueue.Count > maxDebrisCollected) {
 				_collectedDebrisQueue.Peek().AddComponent<MeshFader>();
 				_collectedDebrisQueue.Peek().GetComponent<MeshFader>().startFade = true;
@@ -59,30 +61,47 @@ public class Player : MonoBehaviour {
 
 				//calculate score/level
 				_score += other.gameObject.GetComponent<Collectable>().earnPoints;
-				_level = 1 + (float)Mathf.Round((_score / xpRateDivider) * 10f) / 10f;
+				//_level = 1 + (float)Mathf.Round((_score / xpRateDivider) * 10f) / 10f;
 
-				//set scale of player without affecting debris
-				if (_level > _scale.x) {
-					_scale.x = _level;
-					_scale.y = _level;
-					_scale.z = _level;
-
-					//set null the debris of player before scale it
-					foreach (GameObject debris in _collectedDebrisQueue) {
-						debris.transform.parent = null;
-					}
-
-					gameObject.transform.localScale = _scale;
-					//transform.localScale = Vector3.Lerp(transform.localScale, _scale, 2.0f * Time.deltaTime);
-
-					foreach (GameObject child in _collectedDebrisQueue) {
-						child.transform.parent = gameObject.transform;
-					}
+				if(_score >= _scoreToNextLevel) {
+					levelUp();
 				}
 
 			}
 
 		}
+	}
+
+	private void levelUp() {
+
+		_level++;
+		_score = 0;
+		_scoreStep *= 2;
+		_scoreToNextLevel += _scoreStep;
+
+		_scale.x += 0.1f;
+		_scale.y += 0.1f;
+		_scale.z += 0.1f;
+
+		stuckPower += (_scoreStep / 4);
+		shatterPower += (_scoreStep / 4);
+		gameObject.GetComponent<Rigidbody>().mass += (_scoreStep / 4);
+
+		gameObject.GetComponent<MSCameraController>().CameraSettings.orbital.minDistance += 0.2f;
+		gameObject.GetComponent<MSCameraController>().CameraSettings.orbital.maxDistance += 0.2f;
+
+		//set null the debris of player before scale it
+		foreach (GameObject debris in _collectedDebrisQueue) {
+			debris.transform.parent = null;
+		}
+
+		gameObject.transform.localScale = _scale;
+		//transform.localScale = Vector3.Lerp(transform.localScale, _scale, 2.0f * Time.deltaTime);
+
+		foreach (GameObject child in _collectedDebrisQueue) {
+			child.transform.parent = gameObject.transform;
+		}
+
 	}
 
 	private void disableComponent(GameObject go) {
@@ -132,8 +151,12 @@ public class Player : MonoBehaviour {
 	}
 
 	void OnGUI() {
-		GUI.Label(new Rect(10, 10, 200, 20), "score: " + _score / xpRateDivider);
-		GUI.Label(new Rect(10, 20, 200, 20), "level: " + _level);
-		GUI.Label(new Rect(10, 30, 200, 20), "scale: " + _scale);
+		GUI.Label(new Rect(10, 10, 200, 20), "score: " + _score);
+		GUI.Label(new Rect(10, 20, 200, 20), "score to next level: " + _scoreToNextLevel);
+		GUI.Label(new Rect(10, 30, 200, 20), "level: " + _level);
+		GUI.Label(new Rect(10, 40, 200, 20), "scale: " + _scale);
+
+		GUI.Label(new Rect(10, 60, 200, 20), "stuck power: " + stuckPower);
+		GUI.Label(new Rect(10, 70, 200, 20), "shatter power: " + shatterPower);
 	}
 }

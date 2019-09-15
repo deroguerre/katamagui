@@ -2332,6 +2332,40 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1050805115}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &60170049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 60170048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c728461752fef45f5b5ea82696f5b916, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attachPieceToParent: 1
+  maxPieceToParentDistance: 1
+  addRbToDetachedPieces: 0
+  attachChildrenToPieces: 0
+  maxChildToPieceDistance: 1
+  addRbToDetachedChildren: 0
+--- !u!114 &60170050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 60170048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39e94ca62685244b08d8464b0beb9216, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetStart: {x: 0, y: 0}
+  targetSize: {x: 1, y: 1}
+  square: 0
+  centerMeshOrigo: 0
 --- !u!64 &60170051
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2346,6 +2380,55 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: 85684f26e9aa9e04397cf422c0c923e9, type: 3}
+--- !u!114 &60170052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 60170048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62b9da142b71b40e6ada0cf8dc2aa245, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  requiredVelocity: 1
+  cooldownTime: 0.5
+--- !u!114 &60170053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 60170048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f62b7025d7cc0442fbf846681e55cb7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  generation: 1
+  generationLimit: 3
+  cuts: 2
+  fillCut: 1
+  sendPreSplitMessage: 1
+  sendPostSplitMessage: 1
+  internalHullType: 0
+--- !u!114 &60170054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 60170048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf2a2ae54bb441a4b80ceb65281ae021, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isCollectable: 1
+  shatterResistance: 1
+  stuckResistance: 500
+  earnPoints: 1
 --- !u!1001 &62785276
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5035,6 +5118,40 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1328757336}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &139766908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 139766907}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c728461752fef45f5b5ea82696f5b916, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attachPieceToParent: 1
+  maxPieceToParentDistance: 1
+  addRbToDetachedPieces: 0
+  attachChildrenToPieces: 0
+  maxChildToPieceDistance: 1
+  addRbToDetachedChildren: 0
+--- !u!114 &139766909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 139766907}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39e94ca62685244b08d8464b0beb9216, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetStart: {x: 0, y: 0}
+  targetSize: {x: 1, y: 1}
+  square: 0
+  centerMeshOrigo: 0
 --- !u!64 &139766910
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -5049,6 +5166,55 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: e3db30329cc262745b4606dc59d44764, type: 3}
+--- !u!114 &139766911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 139766907}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62b9da142b71b40e6ada0cf8dc2aa245, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  requiredVelocity: 1
+  cooldownTime: 0.5
+--- !u!114 &139766912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 139766907}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f62b7025d7cc0442fbf846681e55cb7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  generation: 1
+  generationLimit: 4
+  cuts: 5
+  fillCut: 1
+  sendPreSplitMessage: 1
+  sendPostSplitMessage: 1
+  internalHullType: 0
+--- !u!114 &139766913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 139766907}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf2a2ae54bb441a4b80ceb65281ae021, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isCollectable: 1
+  shatterResistance: 1
+  stuckResistance: 500
+  earnPoints: 1
 --- !u!1001 &140169216
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5545,6 +5711,40 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1099288084}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &145872964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 145872963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c728461752fef45f5b5ea82696f5b916, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attachPieceToParent: 1
+  maxPieceToParentDistance: 1
+  addRbToDetachedPieces: 0
+  attachChildrenToPieces: 0
+  maxChildToPieceDistance: 1
+  addRbToDetachedChildren: 0
+--- !u!114 &145872965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 145872963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39e94ca62685244b08d8464b0beb9216, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetStart: {x: 0, y: 0}
+  targetSize: {x: 1, y: 1}
+  square: 0
+  centerMeshOrigo: 0
 --- !u!64 &145872966
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -5559,6 +5759,55 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: 7bb1e36b9b9f51947b1552dcccebe6da, type: 3}
+--- !u!114 &145872967
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 145872963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62b9da142b71b40e6ada0cf8dc2aa245, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  requiredVelocity: 1
+  cooldownTime: 0.5
+--- !u!114 &145872968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 145872963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f62b7025d7cc0442fbf846681e55cb7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  generation: 1
+  generationLimit: 3
+  cuts: 2
+  fillCut: 1
+  sendPreSplitMessage: 1
+  sendPostSplitMessage: 1
+  internalHullType: 0
+--- !u!114 &145872969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 145872963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf2a2ae54bb441a4b80ceb65281ae021, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isCollectable: 1
+  shatterResistance: 1
+  stuckResistance: 500
+  earnPoints: 1
 --- !u!1001 &146926913
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5739,6 +5988,40 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 959165231}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &148716739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 148716738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c728461752fef45f5b5ea82696f5b916, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attachPieceToParent: 1
+  maxPieceToParentDistance: 1
+  addRbToDetachedPieces: 0
+  attachChildrenToPieces: 0
+  maxChildToPieceDistance: 1
+  addRbToDetachedChildren: 0
+--- !u!114 &148716740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 148716738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39e94ca62685244b08d8464b0beb9216, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetStart: {x: 0, y: 0}
+  targetSize: {x: 1, y: 1}
+  square: 0
+  centerMeshOrigo: 0
 --- !u!64 &148716741
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -5753,6 +6036,55 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: 9263f490a361adf4f91bf52afc38f970, type: 3}
+--- !u!114 &148716742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 148716738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62b9da142b71b40e6ada0cf8dc2aa245, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  requiredVelocity: 1
+  cooldownTime: 0.5
+--- !u!114 &148716743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 148716738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f62b7025d7cc0442fbf846681e55cb7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  generation: 1
+  generationLimit: 4
+  cuts: 5
+  fillCut: 1
+  sendPreSplitMessage: 1
+  sendPostSplitMessage: 1
+  internalHullType: 0
+--- !u!114 &148716744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 148716738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf2a2ae54bb441a4b80ceb65281ae021, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isCollectable: 1
+  shatterResistance: 1
+  stuckResistance: 500
+  earnPoints: 1
 --- !u!4 &149960040 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4287106826267920, guid: d4bbfcf82f1bd6f43a1ef19c811777fa,
@@ -10156,6 +10488,40 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 276251046}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &269770523
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 269770522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c728461752fef45f5b5ea82696f5b916, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attachPieceToParent: 1
+  maxPieceToParentDistance: 1
+  addRbToDetachedPieces: 0
+  attachChildrenToPieces: 0
+  maxChildToPieceDistance: 1
+  addRbToDetachedChildren: 0
+--- !u!114 &269770524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 269770522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39e94ca62685244b08d8464b0beb9216, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetStart: {x: 0, y: 0}
+  targetSize: {x: 1, y: 1}
+  square: 0
+  centerMeshOrigo: 0
 --- !u!64 &269770525
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -10170,6 +10536,55 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: fd925672d746c9a4eb87de563698aba9, type: 3}
+--- !u!114 &269770526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 269770522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62b9da142b71b40e6ada0cf8dc2aa245, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  requiredVelocity: 1
+  cooldownTime: 0.5
+--- !u!114 &269770527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 269770522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f62b7025d7cc0442fbf846681e55cb7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  generation: 1
+  generationLimit: 3
+  cuts: 2
+  fillCut: 1
+  sendPreSplitMessage: 1
+  sendPostSplitMessage: 1
+  internalHullType: 0
+--- !u!114 &269770528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 269770522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf2a2ae54bb441a4b80ceb65281ae021, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isCollectable: 1
+  shatterResistance: 1
+  stuckResistance: 500
+  earnPoints: 1
 --- !u!1001 &272192782
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12620,6 +13035,40 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 614991275}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &324434037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 324434036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c728461752fef45f5b5ea82696f5b916, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attachPieceToParent: 1
+  maxPieceToParentDistance: 1
+  addRbToDetachedPieces: 0
+  attachChildrenToPieces: 0
+  maxChildToPieceDistance: 1
+  addRbToDetachedChildren: 0
+--- !u!114 &324434038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 324434036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39e94ca62685244b08d8464b0beb9216, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetStart: {x: 0, y: 0}
+  targetSize: {x: 1, y: 1}
+  square: 0
+  centerMeshOrigo: 0
 --- !u!64 &324434039
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -12634,6 +13083,55 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: 4a08a5caab0099645b5b4652c99d497d, type: 3}
+--- !u!114 &324434040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 324434036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62b9da142b71b40e6ada0cf8dc2aa245, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  requiredVelocity: 1
+  cooldownTime: 0.5
+--- !u!114 &324434041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 324434036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f62b7025d7cc0442fbf846681e55cb7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  generation: 1
+  generationLimit: 4
+  cuts: 5
+  fillCut: 1
+  sendPreSplitMessage: 1
+  sendPostSplitMessage: 1
+  internalHullType: 0
+--- !u!114 &324434042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 324434036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf2a2ae54bb441a4b80ceb65281ae021, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isCollectable: 1
+  shatterResistance: 1
+  stuckResistance: 500
+  earnPoints: 1
 --- !u!1001 &325452145
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13245,6 +13743,40 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1063452850}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &337222365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 337222364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c728461752fef45f5b5ea82696f5b916, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attachPieceToParent: 1
+  maxPieceToParentDistance: 1
+  addRbToDetachedPieces: 0
+  attachChildrenToPieces: 0
+  maxChildToPieceDistance: 1
+  addRbToDetachedChildren: 0
+--- !u!114 &337222366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 337222364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39e94ca62685244b08d8464b0beb9216, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetStart: {x: 0, y: 0}
+  targetSize: {x: 1, y: 1}
+  square: 0
+  centerMeshOrigo: 0
 --- !u!64 &337222367
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -13259,6 +13791,55 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: 6301017ec6a068d40911dcad0721ef50, type: 3}
+--- !u!114 &337222368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 337222364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62b9da142b71b40e6ada0cf8dc2aa245, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  requiredVelocity: 1
+  cooldownTime: 0.5
+--- !u!114 &337222369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 337222364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f62b7025d7cc0442fbf846681e55cb7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  generation: 1
+  generationLimit: 3
+  cuts: 2
+  fillCut: 1
+  sendPreSplitMessage: 1
+  sendPostSplitMessage: 1
+  internalHullType: 0
+--- !u!114 &337222370
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 337222364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf2a2ae54bb441a4b80ceb65281ae021, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isCollectable: 1
+  shatterResistance: 1
+  stuckResistance: 500
+  earnPoints: 1
 --- !u!1001 &338718941
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14096,6 +14677,40 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1149895120}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &363293774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 363293773}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c728461752fef45f5b5ea82696f5b916, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attachPieceToParent: 1
+  maxPieceToParentDistance: 1
+  addRbToDetachedPieces: 0
+  attachChildrenToPieces: 0
+  maxChildToPieceDistance: 1
+  addRbToDetachedChildren: 0
+--- !u!114 &363293775
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 363293773}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39e94ca62685244b08d8464b0beb9216, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetStart: {x: 0, y: 0}
+  targetSize: {x: 1, y: 1}
+  square: 0
+  centerMeshOrigo: 0
 --- !u!64 &363293776
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -14110,6 +14725,55 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: d81af5f756f2fe04997500bf574a7d71, type: 3}
+--- !u!114 &363293777
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 363293773}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62b9da142b71b40e6ada0cf8dc2aa245, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  requiredVelocity: 1
+  cooldownTime: 0.5
+--- !u!114 &363293778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 363293773}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f62b7025d7cc0442fbf846681e55cb7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  generation: 1
+  generationLimit: 4
+  cuts: 5
+  fillCut: 1
+  sendPreSplitMessage: 1
+  sendPostSplitMessage: 1
+  internalHullType: 0
+--- !u!114 &363293779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 363293773}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf2a2ae54bb441a4b80ceb65281ae021, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isCollectable: 1
+  shatterResistance: 1
+  stuckResistance: 500
+  earnPoints: 1
 --- !u!1001 &366172460
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14748,6 +15412,40 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 236798413}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &382243383
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 382243382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c728461752fef45f5b5ea82696f5b916, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attachPieceToParent: 1
+  maxPieceToParentDistance: 1
+  addRbToDetachedPieces: 0
+  attachChildrenToPieces: 0
+  maxChildToPieceDistance: 1
+  addRbToDetachedChildren: 0
+--- !u!114 &382243384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 382243382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39e94ca62685244b08d8464b0beb9216, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetStart: {x: 0, y: 0}
+  targetSize: {x: 1, y: 1}
+  square: 0
+  centerMeshOrigo: 0
 --- !u!64 &382243385
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -14762,6 +15460,55 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: 5041d6962e97a484b97caf0c0d9fc74f, type: 3}
+--- !u!114 &382243386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 382243382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62b9da142b71b40e6ada0cf8dc2aa245, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  requiredVelocity: 1
+  cooldownTime: 0.5
+--- !u!114 &382243387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 382243382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f62b7025d7cc0442fbf846681e55cb7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  generation: 1
+  generationLimit: 3
+  cuts: 2
+  fillCut: 1
+  sendPreSplitMessage: 1
+  sendPostSplitMessage: 1
+  internalHullType: 0
+--- !u!114 &382243388
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 382243382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf2a2ae54bb441a4b80ceb65281ae021, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isCollectable: 1
+  shatterResistance: 1
+  stuckResistance: 500
+  earnPoints: 1
 --- !u!1001 &385539284
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17260,6 +18007,40 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1336250387}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &439866130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 439866129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c728461752fef45f5b5ea82696f5b916, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attachPieceToParent: 1
+  maxPieceToParentDistance: 1
+  addRbToDetachedPieces: 0
+  attachChildrenToPieces: 0
+  maxChildToPieceDistance: 1
+  addRbToDetachedChildren: 0
+--- !u!114 &439866131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 439866129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39e94ca62685244b08d8464b0beb9216, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetStart: {x: 0, y: 0}
+  targetSize: {x: 1, y: 1}
+  square: 0
+  centerMeshOrigo: 0
 --- !u!64 &439866132
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -17274,6 +18055,55 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: c53c69025e675124ebb2059d55d52c01, type: 3}
+--- !u!114 &439866133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 439866129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62b9da142b71b40e6ada0cf8dc2aa245, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  requiredVelocity: 1
+  cooldownTime: 0.5
+--- !u!114 &439866134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 439866129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f62b7025d7cc0442fbf846681e55cb7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  generation: 1
+  generationLimit: 3
+  cuts: 2
+  fillCut: 1
+  sendPreSplitMessage: 1
+  sendPostSplitMessage: 1
+  internalHullType: 0
+--- !u!114 &439866135
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 439866129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf2a2ae54bb441a4b80ceb65281ae021, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isCollectable: 1
+  shatterResistance: 1
+  stuckResistance: 500
+  earnPoints: 1
 --- !u!4 &442155795 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4525129552197150, guid: 571a69f902adb9846a5eabd744415ecc,
@@ -20627,6 +21457,40 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1235262266}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &522636877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 522636876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c728461752fef45f5b5ea82696f5b916, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attachPieceToParent: 1
+  maxPieceToParentDistance: 1
+  addRbToDetachedPieces: 0
+  attachChildrenToPieces: 0
+  maxChildToPieceDistance: 1
+  addRbToDetachedChildren: 0
+--- !u!114 &522636878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 522636876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39e94ca62685244b08d8464b0beb9216, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetStart: {x: 0, y: 0}
+  targetSize: {x: 1, y: 1}
+  square: 0
+  centerMeshOrigo: 0
 --- !u!64 &522636879
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -20641,6 +21505,55 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: c60a0a0191262a84e9831412f10390f5, type: 3}
+--- !u!114 &522636880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 522636876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62b9da142b71b40e6ada0cf8dc2aa245, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  requiredVelocity: 1
+  cooldownTime: 0.5
+--- !u!114 &522636881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 522636876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f62b7025d7cc0442fbf846681e55cb7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  generation: 1
+  generationLimit: 4
+  cuts: 5
+  fillCut: 1
+  sendPreSplitMessage: 1
+  sendPostSplitMessage: 1
+  internalHullType: 0
+--- !u!114 &522636882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 522636876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf2a2ae54bb441a4b80ceb65281ae021, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isCollectable: 1
+  shatterResistance: 1
+  stuckResistance: 500
+  earnPoints: 1
 --- !u!1001 &522903267
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -33886,6 +34799,40 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1299359022}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &919289565
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919289564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c728461752fef45f5b5ea82696f5b916, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attachPieceToParent: 1
+  maxPieceToParentDistance: 1
+  addRbToDetachedPieces: 0
+  attachChildrenToPieces: 0
+  maxChildToPieceDistance: 1
+  addRbToDetachedChildren: 0
+--- !u!114 &919289566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919289564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39e94ca62685244b08d8464b0beb9216, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetStart: {x: 0, y: 0}
+  targetSize: {x: 1, y: 1}
+  square: 0
+  centerMeshOrigo: 0
 --- !u!64 &919289567
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -33900,6 +34847,55 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: f93ea3998ade9c84ebe0e214aaf6513c, type: 3}
+--- !u!114 &919289568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919289564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62b9da142b71b40e6ada0cf8dc2aa245, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  requiredVelocity: 1
+  cooldownTime: 0.5
+--- !u!114 &919289569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919289564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f62b7025d7cc0442fbf846681e55cb7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  generation: 1
+  generationLimit: 3
+  cuts: 2
+  fillCut: 1
+  sendPreSplitMessage: 1
+  sendPostSplitMessage: 1
+  internalHullType: 0
+--- !u!114 &919289570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919289564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf2a2ae54bb441a4b80ceb65281ae021, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isCollectable: 1
+  shatterResistance: 1
+  stuckResistance: 500
+  earnPoints: 1
 --- !u!4 &922126675 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4711412620918398, guid: b9f2941615c218b4282635a3390d783c,
@@ -34089,6 +35085,40 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1666909387}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &937175165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 937175164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c728461752fef45f5b5ea82696f5b916, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attachPieceToParent: 1
+  maxPieceToParentDistance: 1
+  addRbToDetachedPieces: 0
+  attachChildrenToPieces: 0
+  maxChildToPieceDistance: 1
+  addRbToDetachedChildren: 0
+--- !u!114 &937175166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 937175164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39e94ca62685244b08d8464b0beb9216, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetStart: {x: 0, y: 0}
+  targetSize: {x: 1, y: 1}
+  square: 0
+  centerMeshOrigo: 0
 --- !u!64 &937175167
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -34103,6 +35133,55 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: 2760ea24380cbde4ba653e945f3b3930, type: 3}
+--- !u!114 &937175168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 937175164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62b9da142b71b40e6ada0cf8dc2aa245, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  requiredVelocity: 1
+  cooldownTime: 0.5
+--- !u!114 &937175169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 937175164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f62b7025d7cc0442fbf846681e55cb7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  generation: 1
+  generationLimit: 3
+  cuts: 2
+  fillCut: 1
+  sendPreSplitMessage: 1
+  sendPostSplitMessage: 1
+  internalHullType: 0
+--- !u!114 &937175170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 937175164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf2a2ae54bb441a4b80ceb65281ae021, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isCollectable: 1
+  shatterResistance: 1
+  stuckResistance: 500
+  earnPoints: 1
 --- !u!1001 &940032990
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -38627,6 +39706,40 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1443756884}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1045388235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1045388234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c728461752fef45f5b5ea82696f5b916, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attachPieceToParent: 1
+  maxPieceToParentDistance: 1
+  addRbToDetachedPieces: 0
+  attachChildrenToPieces: 0
+  maxChildToPieceDistance: 1
+  addRbToDetachedChildren: 0
+--- !u!114 &1045388236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1045388234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39e94ca62685244b08d8464b0beb9216, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetStart: {x: 0, y: 0}
+  targetSize: {x: 1, y: 1}
+  square: 0
+  centerMeshOrigo: 0
 --- !u!64 &1045388237
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -38641,6 +39754,55 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: 22066e81b661b45438c7cf9f53e41dcf, type: 3}
+--- !u!114 &1045388238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1045388234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62b9da142b71b40e6ada0cf8dc2aa245, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  requiredVelocity: 1
+  cooldownTime: 0.5
+--- !u!114 &1045388239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1045388234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f62b7025d7cc0442fbf846681e55cb7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  generation: 1
+  generationLimit: 4
+  cuts: 5
+  fillCut: 1
+  sendPreSplitMessage: 1
+  sendPostSplitMessage: 1
+  internalHullType: 0
+--- !u!114 &1045388240
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1045388234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf2a2ae54bb441a4b80ceb65281ae021, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isCollectable: 1
+  shatterResistance: 1
+  stuckResistance: 500
+  earnPoints: 1
 --- !u!4 &1046634124 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4095121003954976, guid: a323c930711a463478f1cadd4a89ff53,
@@ -39463,6 +40625,40 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 297822848}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1061932698
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1061932697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c728461752fef45f5b5ea82696f5b916, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attachPieceToParent: 1
+  maxPieceToParentDistance: 1
+  addRbToDetachedPieces: 0
+  attachChildrenToPieces: 0
+  maxChildToPieceDistance: 1
+  addRbToDetachedChildren: 0
+--- !u!114 &1061932699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1061932697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39e94ca62685244b08d8464b0beb9216, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetStart: {x: 0, y: 0}
+  targetSize: {x: 1, y: 1}
+  square: 0
+  centerMeshOrigo: 0
 --- !u!64 &1061932700
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -39477,6 +40673,55 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: 2bf1803e278f06c48a97b89a4c16c61f, type: 3}
+--- !u!114 &1061932701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1061932697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62b9da142b71b40e6ada0cf8dc2aa245, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  requiredVelocity: 1
+  cooldownTime: 0.5
+--- !u!114 &1061932702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1061932697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f62b7025d7cc0442fbf846681e55cb7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  generation: 1
+  generationLimit: 3
+  cuts: 2
+  fillCut: 1
+  sendPreSplitMessage: 1
+  sendPostSplitMessage: 1
+  internalHullType: 0
+--- !u!114 &1061932703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1061932697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf2a2ae54bb441a4b80ceb65281ae021, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isCollectable: 1
+  shatterResistance: 1
+  stuckResistance: 500
+  earnPoints: 1
 --- !u!1001 &1062065945
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -52460,6 +53705,40 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 648189564}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1400054349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1400054348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c728461752fef45f5b5ea82696f5b916, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attachPieceToParent: 1
+  maxPieceToParentDistance: 1
+  addRbToDetachedPieces: 0
+  attachChildrenToPieces: 0
+  maxChildToPieceDistance: 1
+  addRbToDetachedChildren: 0
+--- !u!114 &1400054350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1400054348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39e94ca62685244b08d8464b0beb9216, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetStart: {x: 0, y: 0}
+  targetSize: {x: 1, y: 1}
+  square: 0
+  centerMeshOrigo: 0
 --- !u!64 &1400054351
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -52474,6 +53753,55 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: 20ed10e9969026f46aab9f0a7ad670c9, type: 3}
+--- !u!114 &1400054352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1400054348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62b9da142b71b40e6ada0cf8dc2aa245, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  requiredVelocity: 1
+  cooldownTime: 0.5
+--- !u!114 &1400054353
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1400054348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f62b7025d7cc0442fbf846681e55cb7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  generation: 1
+  generationLimit: 3
+  cuts: 2
+  fillCut: 1
+  sendPreSplitMessage: 1
+  sendPostSplitMessage: 1
+  internalHullType: 0
+--- !u!114 &1400054354
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1400054348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf2a2ae54bb441a4b80ceb65281ae021, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isCollectable: 1
+  shatterResistance: 1
+  stuckResistance: 500
+  earnPoints: 1
 --- !u!1001 &1400739751
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -57580,6 +58908,40 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1335529729}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1542651766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1542651765}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c728461752fef45f5b5ea82696f5b916, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attachPieceToParent: 1
+  maxPieceToParentDistance: 1
+  addRbToDetachedPieces: 0
+  attachChildrenToPieces: 0
+  maxChildToPieceDistance: 1
+  addRbToDetachedChildren: 0
+--- !u!114 &1542651767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1542651765}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39e94ca62685244b08d8464b0beb9216, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetStart: {x: 0, y: 0}
+  targetSize: {x: 1, y: 1}
+  square: 0
+  centerMeshOrigo: 0
 --- !u!64 &1542651768
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -57594,6 +58956,55 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: 93fc94d2128f47b499fdaff7fe193bd8, type: 3}
+--- !u!114 &1542651769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1542651765}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62b9da142b71b40e6ada0cf8dc2aa245, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  requiredVelocity: 1
+  cooldownTime: 0.5
+--- !u!114 &1542651770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1542651765}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f62b7025d7cc0442fbf846681e55cb7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  generation: 1
+  generationLimit: 3
+  cuts: 2
+  fillCut: 1
+  sendPreSplitMessage: 1
+  sendPostSplitMessage: 1
+  internalHullType: 0
+--- !u!114 &1542651771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1542651765}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf2a2ae54bb441a4b80ceb65281ae021, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isCollectable: 1
+  shatterResistance: 1
+  stuckResistance: 500
+  earnPoints: 1
 --- !u!1001 &1543239391
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -60298,6 +61709,40 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1381109392}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1617160806
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1617160805}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c728461752fef45f5b5ea82696f5b916, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attachPieceToParent: 1
+  maxPieceToParentDistance: 1
+  addRbToDetachedPieces: 0
+  attachChildrenToPieces: 0
+  maxChildToPieceDistance: 1
+  addRbToDetachedChildren: 0
+--- !u!114 &1617160807
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1617160805}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39e94ca62685244b08d8464b0beb9216, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetStart: {x: 0, y: 0}
+  targetSize: {x: 1, y: 1}
+  square: 0
+  centerMeshOrigo: 0
 --- !u!64 &1617160808
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -60312,6 +61757,55 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: f1438b8b1250475409e5a1d2bcfb3e43, type: 3}
+--- !u!114 &1617160809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1617160805}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62b9da142b71b40e6ada0cf8dc2aa245, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  requiredVelocity: 1
+  cooldownTime: 0.5
+--- !u!114 &1617160810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1617160805}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f62b7025d7cc0442fbf846681e55cb7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  generation: 1
+  generationLimit: 4
+  cuts: 5
+  fillCut: 1
+  sendPreSplitMessage: 1
+  sendPostSplitMessage: 1
+  internalHullType: 0
+--- !u!114 &1617160811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1617160805}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf2a2ae54bb441a4b80ceb65281ae021, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isCollectable: 1
+  shatterResistance: 1
+  stuckResistance: 500
+  earnPoints: 1
 --- !u!1001 &1617985848
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -62675,6 +64169,40 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 668216810}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1671715711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1671715710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c728461752fef45f5b5ea82696f5b916, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attachPieceToParent: 1
+  maxPieceToParentDistance: 1
+  addRbToDetachedPieces: 0
+  attachChildrenToPieces: 0
+  maxChildToPieceDistance: 1
+  addRbToDetachedChildren: 0
+--- !u!114 &1671715712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1671715710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39e94ca62685244b08d8464b0beb9216, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetStart: {x: 0, y: 0}
+  targetSize: {x: 1, y: 1}
+  square: 0
+  centerMeshOrigo: 0
 --- !u!64 &1671715713
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -62689,6 +64217,55 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: e6daeb30212ea5645a7d0b2087c721aa, type: 3}
+--- !u!114 &1671715714
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1671715710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62b9da142b71b40e6ada0cf8dc2aa245, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  requiredVelocity: 1
+  cooldownTime: 0.5
+--- !u!114 &1671715715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1671715710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f62b7025d7cc0442fbf846681e55cb7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  generation: 1
+  generationLimit: 3
+  cuts: 2
+  fillCut: 1
+  sendPreSplitMessage: 1
+  sendPostSplitMessage: 1
+  internalHullType: 0
+--- !u!114 &1671715716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1671715710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf2a2ae54bb441a4b80ceb65281ae021, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isCollectable: 1
+  shatterResistance: 1
+  stuckResistance: 500
+  earnPoints: 1
 --- !u!1 &1671746289
 GameObject:
   m_ObjectHideFlags: 0
@@ -65794,6 +67371,40 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 392513444}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1756443200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1756443199}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c728461752fef45f5b5ea82696f5b916, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attachPieceToParent: 1
+  maxPieceToParentDistance: 1
+  addRbToDetachedPieces: 0
+  attachChildrenToPieces: 0
+  maxChildToPieceDistance: 1
+  addRbToDetachedChildren: 0
+--- !u!114 &1756443201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1756443199}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39e94ca62685244b08d8464b0beb9216, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetStart: {x: 0, y: 0}
+  targetSize: {x: 1, y: 1}
+  square: 0
+  centerMeshOrigo: 0
 --- !u!64 &1756443202
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -65808,6 +67419,55 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: c00149a22995e7545be9a600777e16b4, type: 3}
+--- !u!114 &1756443203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1756443199}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62b9da142b71b40e6ada0cf8dc2aa245, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  requiredVelocity: 1
+  cooldownTime: 0.5
+--- !u!114 &1756443204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1756443199}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f62b7025d7cc0442fbf846681e55cb7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  generation: 1
+  generationLimit: 3
+  cuts: 2
+  fillCut: 1
+  sendPreSplitMessage: 1
+  sendPostSplitMessage: 1
+  internalHullType: 0
+--- !u!114 &1756443205
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1756443199}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf2a2ae54bb441a4b80ceb65281ae021, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isCollectable: 1
+  shatterResistance: 1
+  stuckResistance: 500
+  earnPoints: 1
 --- !u!1001 &1758165823
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -70731,6 +72391,40 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1554220618}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1884793452
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1884793451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c728461752fef45f5b5ea82696f5b916, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attachPieceToParent: 1
+  maxPieceToParentDistance: 1
+  addRbToDetachedPieces: 0
+  attachChildrenToPieces: 0
+  maxChildToPieceDistance: 1
+  addRbToDetachedChildren: 0
+--- !u!114 &1884793453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1884793451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39e94ca62685244b08d8464b0beb9216, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetStart: {x: 0, y: 0}
+  targetSize: {x: 1, y: 1}
+  square: 0
+  centerMeshOrigo: 0
 --- !u!64 &1884793454
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -70745,6 +72439,55 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: 6f3e1248bc3939247869a2a03c2ac7b5, type: 3}
+--- !u!114 &1884793455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1884793451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62b9da142b71b40e6ada0cf8dc2aa245, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  requiredVelocity: 1
+  cooldownTime: 0.5
+--- !u!114 &1884793456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1884793451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f62b7025d7cc0442fbf846681e55cb7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  generation: 1
+  generationLimit: 3
+  cuts: 2
+  fillCut: 1
+  sendPreSplitMessage: 1
+  sendPostSplitMessage: 1
+  internalHullType: 0
+--- !u!114 &1884793457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1884793451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf2a2ae54bb441a4b80ceb65281ae021, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isCollectable: 1
+  shatterResistance: 1
+  stuckResistance: 500
+  earnPoints: 1
 --- !u!1001 &1885337171
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -72424,6 +74167,40 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 418652547}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1932645339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1932645338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c728461752fef45f5b5ea82696f5b916, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attachPieceToParent: 1
+  maxPieceToParentDistance: 1
+  addRbToDetachedPieces: 0
+  attachChildrenToPieces: 0
+  maxChildToPieceDistance: 1
+  addRbToDetachedChildren: 0
+--- !u!114 &1932645340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1932645338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39e94ca62685244b08d8464b0beb9216, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetStart: {x: 0, y: 0}
+  targetSize: {x: 1, y: 1}
+  square: 0
+  centerMeshOrigo: 0
 --- !u!64 &1932645341
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -72438,6 +74215,55 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: 732195358fe42b84ab10d8c3c295d847, type: 3}
+--- !u!114 &1932645342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1932645338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62b9da142b71b40e6ada0cf8dc2aa245, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  requiredVelocity: 1
+  cooldownTime: 0.5
+--- !u!114 &1932645343
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1932645338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f62b7025d7cc0442fbf846681e55cb7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  generation: 1
+  generationLimit: 4
+  cuts: 5
+  fillCut: 1
+  sendPreSplitMessage: 1
+  sendPostSplitMessage: 1
+  internalHullType: 0
+--- !u!114 &1932645344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1932645338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf2a2ae54bb441a4b80ceb65281ae021, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isCollectable: 1
+  shatterResistance: 1
+  stuckResistance: 500
+  earnPoints: 1
 --- !u!1001 &1936061224
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -73224,6 +75050,40 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1790582015}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1949114905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1949114904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c728461752fef45f5b5ea82696f5b916, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attachPieceToParent: 1
+  maxPieceToParentDistance: 1
+  addRbToDetachedPieces: 0
+  attachChildrenToPieces: 0
+  maxChildToPieceDistance: 1
+  addRbToDetachedChildren: 0
+--- !u!114 &1949114906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1949114904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39e94ca62685244b08d8464b0beb9216, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetStart: {x: 0, y: 0}
+  targetSize: {x: 1, y: 1}
+  square: 0
+  centerMeshOrigo: 0
 --- !u!64 &1949114907
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -73238,6 +75098,55 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: 617ceb975cd5d8243b2b3ad62359e900, type: 3}
+--- !u!114 &1949114908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1949114904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62b9da142b71b40e6ada0cf8dc2aa245, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  requiredVelocity: 1
+  cooldownTime: 0.5
+--- !u!114 &1949114909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1949114904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f62b7025d7cc0442fbf846681e55cb7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  generation: 1
+  generationLimit: 3
+  cuts: 2
+  fillCut: 1
+  sendPreSplitMessage: 1
+  sendPostSplitMessage: 1
+  internalHullType: 0
+--- !u!114 &1949114910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1949114904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf2a2ae54bb441a4b80ceb65281ae021, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isCollectable: 1
+  shatterResistance: 1
+  stuckResistance: 500
+  earnPoints: 1
 --- !u!1001 &1949876734
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -75167,6 +77076,40 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 818811449}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2013436577
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2013436576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c728461752fef45f5b5ea82696f5b916, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attachPieceToParent: 1
+  maxPieceToParentDistance: 1
+  addRbToDetachedPieces: 0
+  attachChildrenToPieces: 0
+  maxChildToPieceDistance: 1
+  addRbToDetachedChildren: 0
+--- !u!114 &2013436578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2013436576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39e94ca62685244b08d8464b0beb9216, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetStart: {x: 0, y: 0}
+  targetSize: {x: 1, y: 1}
+  square: 0
+  centerMeshOrigo: 0
 --- !u!64 &2013436579
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -75181,6 +77124,55 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: c00149a22995e7545be9a600777e16b4, type: 3}
+--- !u!114 &2013436580
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2013436576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62b9da142b71b40e6ada0cf8dc2aa245, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  requiredVelocity: 1
+  cooldownTime: 0.5
+--- !u!114 &2013436581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2013436576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f62b7025d7cc0442fbf846681e55cb7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  generation: 1
+  generationLimit: 4
+  cuts: 5
+  fillCut: 1
+  sendPreSplitMessage: 1
+  sendPostSplitMessage: 1
+  internalHullType: 0
+--- !u!114 &2013436582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2013436576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf2a2ae54bb441a4b80ceb65281ae021, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isCollectable: 1
+  shatterResistance: 1
+  stuckResistance: 500
+  earnPoints: 1
 --- !u!1001 &2013936718
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -75459,26 +77451,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2018254529}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &2021750361 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1172920277092566, guid: 0c0ff49ff09754f4e89b4601e969f78e,
-    type: 3}
-  m_PrefabInstance: {fileID: 362357835}
-  m_PrefabAsset: {fileID: 0}
---- !u!64 &2021750364
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2021750361}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 4300000, guid: c94efc092c905734c919ee0fc88b9d29, type: 3}
 --- !u!1001 &2021756486
 PrefabInstance:
   m_ObjectHideFlags: 0

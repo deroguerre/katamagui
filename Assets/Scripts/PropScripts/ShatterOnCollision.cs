@@ -23,7 +23,10 @@ namespace ShatterToolkit.Helpers {
 
 						//Debug.Log("hit from player");
 						if (gameObject.GetComponent<Collectable>().stuckResistance > collision.gameObject.GetComponent<Player>().stuckPower) {
-							StartShatter(collision);
+
+							if(gameObject.GetComponent<Collectable>().shatterResistance < collision.gameObject.GetComponent<Player>().shatterPower) {
+								StartShatter(collision);
+							}
 						}
 
 					}
@@ -44,7 +47,10 @@ namespace ShatterToolkit.Helpers {
 					gameObject.GetComponent<Rigidbody>().isKinematic = false;
 				}
 			} else {
-				gameObject.AddComponent<Rigidbody>();
+				Rigidbody newRb = gameObject.AddComponent<Rigidbody>();
+				if (gameObject.GetComponent<Collectable>() != null) {
+					newRb.mass = gameObject.GetComponent<Collectable>().stuckResistance;
+				}
 			}
 
 			if (gameObject.GetComponent<MeshCollider>() == null) {
@@ -65,7 +71,7 @@ namespace ShatterToolkit.Helpers {
 				}
 			}
 
-			if(gameObject.GetComponent<BoxCollider>() != null) {
+			if (gameObject.GetComponent<BoxCollider>() != null) {
 				Destroy(gameObject.GetComponent<BoxCollider>());
 			}
 

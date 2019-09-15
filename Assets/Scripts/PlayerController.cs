@@ -39,15 +39,22 @@ public class PlayerController : MonoBehaviour {
 
 		//Debug.Log(Input.GetAxis("Dash"));
 
-		if (Input.GetButtonDown("LB")) {
+		if (Input.GetButton("LB")) {
 			Debug.Log("LB pressed");
-			Camera.main.fieldOfView -= 10;
+
+			if (gameObject.GetComponent<MSCameraController>().CameraSettings.orbital.minDistance > 1) {
+				gameObject.GetComponent<MSCameraController>().CameraSettings.orbital.minDistance -= 1f;
+				gameObject.GetComponent<MSCameraController>().CameraSettings.orbital.maxDistance -= 1f;
+			}
 			//cameras[index]._camera.fieldOfView -= _scrollInputMSACC * CameraSettings.firstPerson.speedScroolZoom * 50.0f;
 		}
 
-		if (Input.GetButtonDown("RB")) {
+		if (Input.GetButton("RB")) {
 			Debug.Log("RB pressed");
-			Camera.main.fieldOfView += 10;
+			if (gameObject.GetComponent<MSCameraController>().CameraSettings.orbital.minDistance < 1000) {
+				gameObject.GetComponent<MSCameraController>().CameraSettings.orbital.minDistance += 1f;
+				gameObject.GetComponent<MSCameraController>().CameraSettings.orbital.maxDistance += 1f;
+			}
 		}
 
 		if (Input.GetAxis("Dash") < -0.1f) {
