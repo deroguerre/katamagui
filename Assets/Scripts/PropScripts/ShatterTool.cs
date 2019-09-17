@@ -21,10 +21,10 @@ namespace ShatterToolkit {
 		protected bool fillCut = true;
 
 		[SerializeField]
-		protected bool sendPreSplitMessage = false;
+		protected bool sendPreSplitMessage = true;
 
 		[SerializeField]
-		protected bool sendPostSplitMessage = false;
+		protected bool sendPostSplitMessage = true;
 
 		[SerializeField]
 		protected HullType internalHullType = HullType.FastHull;

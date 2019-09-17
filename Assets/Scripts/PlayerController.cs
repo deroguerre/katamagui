@@ -42,9 +42,9 @@ public class PlayerController : MonoBehaviour {
 		if (Input.GetButton("LB")) {
 			Debug.Log("LB pressed");
 
-			if (gameObject.GetComponent<MSCameraController>().CameraSettings.orbital.minDistance > 1) {
-				gameObject.GetComponent<MSCameraController>().CameraSettings.orbital.minDistance -= 1f;
-				gameObject.GetComponent<MSCameraController>().CameraSettings.orbital.maxDistance -= 1f;
+			if (gameObject.GetComponent<MSCameraController>().CameraSettings.orbital.minDistance > 0.1f) {
+				gameObject.GetComponent<MSCameraController>().CameraSettings.orbital.minDistance -= 0.5f;
+				gameObject.GetComponent<MSCameraController>().CameraSettings.orbital.maxDistance -= 0.5f;
 			}
 			//cameras[index]._camera.fieldOfView -= _scrollInputMSACC * CameraSettings.firstPerson.speedScroolZoom * 50.0f;
 		}
@@ -52,8 +52,8 @@ public class PlayerController : MonoBehaviour {
 		if (Input.GetButton("RB")) {
 			Debug.Log("RB pressed");
 			if (gameObject.GetComponent<MSCameraController>().CameraSettings.orbital.minDistance < 1000) {
-				gameObject.GetComponent<MSCameraController>().CameraSettings.orbital.minDistance += 1f;
-				gameObject.GetComponent<MSCameraController>().CameraSettings.orbital.maxDistance += 1f;
+				gameObject.GetComponent<MSCameraController>().CameraSettings.orbital.minDistance += 0.5f;
+				gameObject.GetComponent<MSCameraController>().CameraSettings.orbital.maxDistance += 0.5f;
 			}
 		}
 
