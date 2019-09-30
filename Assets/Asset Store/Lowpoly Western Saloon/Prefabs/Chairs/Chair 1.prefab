@@ -116,8 +116,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isCollectable: 1
   isShatterable: 0
-  stuckResistance: 12
-  shatterResistance: 5
+  stuckResistance: 25
+  shatterResistance: 10
   requiredVelocity: 1
   cooldownTime: 0.5
   earnPoints: 10

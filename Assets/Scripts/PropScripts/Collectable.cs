@@ -12,6 +12,7 @@ public class Collectable : MonoBehaviour {
 	[HideInInspector]
 	public float cooldownTime = 0.5f;
 	public float earnPoints = 1;
+	public bool isHidden = false;
 
 	private Vector3 _scale;
 
@@ -36,6 +37,7 @@ public class Collectable : MonoBehaviour {
 
 	public void OnCollisionEnter(Collision collision) {
 
+		//shutter on collision
 		if (isShatterable && timeSinceInstantiated >= cooldownTime) {
 			if (collision.relativeVelocity.magnitude >= requiredVelocity) {
 

@@ -5,6 +5,7 @@ using UnityEngine;
 public class MeshFader : MonoBehaviour
 {
 	public bool startFade = false;
+	public bool destroyIt = false;
 	private bool fadeOut = false;
 
 	void Update() {
@@ -31,6 +32,9 @@ public class MeshFader : MonoBehaviour
 			rend.material.color = Color.Lerp(startColor, endColor, t / fadeTime);
 			yield return null;
 		}
-		Destroy(gameObject);
+
+		if(destroyIt) {
+			Destroy(gameObject);
+		}
 	}
 }

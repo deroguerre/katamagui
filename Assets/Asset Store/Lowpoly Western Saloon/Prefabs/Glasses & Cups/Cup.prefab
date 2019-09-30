@@ -129,4 +129,4 @@ MonoBehaviour:
   shatterResistance: 1
   requiredVelocity: 1
   cooldownTime: 0.5
-  earnPoints: 1
+  earnPoints: 3

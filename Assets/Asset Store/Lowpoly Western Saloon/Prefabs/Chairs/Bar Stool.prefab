@@ -17,7 +17,6 @@ GameObject:
   - component: {fileID: 1109987724}
   - component: {fileID: 1814002174}
   - component: {fileID: -390833162405023183}
-  - component: {fileID: 1011870116342005294}
   m_Layer: 0
   m_Name: Bar Stool
   m_TagString: Untagged
@@ -148,8 +147,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isCollectable: 1
   isShatterable: 1
-  stuckResistance: 12
-  shatterResistance: 6
+  stuckResistance: 25
+  shatterResistance: 1
   requiredVelocity: 1
   cooldownTime: 0.5
   earnPoints: 1
@@ -187,18 +186,3 @@ MonoBehaviour:
   targetSize: {x: 1, y: 1}
   square: 0
   centerMeshOrigo: 0
---- !u!114 &1011870116342005294
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 132774}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba2854115b06145a29c0c781a660e25b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fillColor:
-    serializedVersion: 2
-    rgba: 4283260283

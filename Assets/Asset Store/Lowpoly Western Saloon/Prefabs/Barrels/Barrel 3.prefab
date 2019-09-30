@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: 1722378386460981741}
   - component: {fileID: 6533643101274345345}
   - component: {fileID: 2432186141107118770}
-  - component: {fileID: 2844399224187456963}
   - component: {fileID: 3810948620662335168}
   - component: {fileID: 1812414317397201458}
   m_Layer: 0
@@ -129,7 +128,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isCollectable: 1
   isShatterable: 0
-  stuckResistance: 16
+  stuckResistance: 50
   shatterResistance: 10
   requiredVelocity: 1
   cooldownTime: 0.5
@@ -153,20 +152,6 @@ MonoBehaviour:
   sendPreSplitMessage: 1
   sendPostSplitMessage: 1
   internalHullType: 0
---- !u!114 &2844399224187456963
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 199832}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62b9da142b71b40e6ada0cf8dc2aa245, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  requiredVelocity: 1
-  cooldownTime: 0.5
 --- !u!114 &3810948620662335168
 MonoBehaviour:
   m_ObjectHideFlags: 0

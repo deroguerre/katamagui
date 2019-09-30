@@ -13,7 +13,7 @@ public class Player : MonoBehaviour {
 
 	private float _score = 0;
 	private float _scoreStep = 10;
-	private float _scoreToNextLevel = 100;
+	private float _scoreToNextLevel = 20;
 	private float _level = 0;
 	private Vector3 _scale = new Vector3(1, 1, 1);
 	//private List<GameObject> _collectedDebrisList = new List<GameObject>();
@@ -60,7 +60,7 @@ public class Player : MonoBehaviour {
 				_collectedDebrisQueue.Enqueue(other.gameObject);
 
 				//calculate score/level
-				_score += other.gameObject.GetComponent<Collectable>().earnPoints;
+				_score += other.gameObject.GetComponent<Collectable>().stuckResistance;
 				//_level = 1 + (float)Mathf.Round((_score / xpRateDivider) * 10f) / 10f;
 
 				if(_score >= _scoreToNextLevel) {
@@ -76,19 +76,19 @@ public class Player : MonoBehaviour {
 
 		_level++;
 		_score = 0;
-		_scoreStep *= 2;
+		_scoreStep *= 1.2f;
 		_scoreToNextLevel += _scoreStep;
 
-		_scale.x += 0.1f;
-		_scale.y += 0.1f;
-		_scale.z += 0.1f;
+		_scale.x += 2f;
+		_scale.y += 2f;
+		_scale.z += 2f;
 
-		stuckPower += (_scoreStep / 4);
-		shatterPower += (_scoreStep / 4);
-		gameObject.GetComponent<Rigidbody>().mass += (_scoreStep / 4);
+		stuckPower += (_scoreStep / 6);
+		shatterPower += (_scoreStep / 6);
+		//gameObject.GetComponent<Rigidbody>().mass += (_scoreStep / 4);
 
-		gameObject.GetComponent<MSCameraController>().CameraSettings.orbital.minDistance += 0.2f;
-		gameObject.GetComponent<MSCameraController>().CameraSettings.orbital.maxDistance += 0.2f;
+		gameObject.GetComponent<MSCameraController>().CameraSettings.orbital.minDistance += 10f;
+		gameObject.GetComponent<MSCameraController>().CameraSettings.orbital.maxDistance += 10f;
 
 		//set null the debris of player before scale it
 		foreach (GameObject debris in _collectedDebrisQueue) {
