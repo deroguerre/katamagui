@@ -357,7 +357,7 @@ MonoBehaviour:
       minAngleY: 0
       maxAngleY: 80
       ignoreCollision: 1
-      rotateWhenClick: 0
+      rotateWhenClick: 1
       keyToRotate: mouse 0
       invertXInput: 0
       invertYInput: 0
