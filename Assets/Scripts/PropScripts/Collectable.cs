@@ -64,6 +64,7 @@ public class Collectable : MonoBehaviour {
 
 	public void StartShatter(Collision collision) {
 
+		//disable kinematic
 		if (gameObject.GetComponent<Rigidbody>() != null) {
 			if (gameObject.GetComponent<Rigidbody>().isKinematic) {
 				gameObject.GetComponent<Rigidbody>().isKinematic = false;
@@ -75,12 +76,12 @@ public class Collectable : MonoBehaviour {
 			}
 		}
 
+		//add mesh collider
 		if (gameObject.GetComponent<MeshCollider>() == null) {
 			gameObject.AddComponent<MeshCollider>();
 		}
 		gameObject.GetComponent<MeshCollider>().convex = true;
 
-		//Debug.Break();
 
 		// Find the new contact point
 		foreach (ContactPoint contact in collision.contacts) {
@@ -93,10 +94,19 @@ public class Collectable : MonoBehaviour {
 			}
 		}
 
+		//set visible if hidden by raycasting between player and camera
+		if(gameObject.GetComponent<Collectable>().isHidden) {
+			Renderer rend = gameObject.GetComponent<Renderer>();
+			StandardShaderUtils.ChangeRenderMode(rend.material, StandardShaderUtils.BlendMode.Fade);
+			rend.material.color = Color.white;
+		}
+
+		//remove box collider
 		if (gameObject.GetComponent<BoxCollider>() != null) {
 			Destroy(gameObject.GetComponent<BoxCollider>());
 		}
 
+		//remove all colliders
 		if (gameObject.transform.Find("Colliders") != null) {
 			Destroy(gameObject.transform.Find("Colliders").gameObject);
 		}

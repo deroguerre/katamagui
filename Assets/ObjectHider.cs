@@ -29,16 +29,14 @@ public class ObjectHider : MonoBehaviour
 
 		hits = Physics.RaycastAll(transform.position, direction * -1, distance);
 
-		// Debug.Log("nb hits = " + hits.Length);
-
 		//set transparency on hit
 		foreach(RaycastHit hit in hits) {
 
 			if(hit.transform.gameObject.GetComponent<Collectable>() != null) {
 				if(!hit.transform.gameObject.GetComponent<Collectable>().isHidden) {
 
-					StartCoroutine(setMaterialTransparent(hit.transform.gameObject));
 					hit.transform.gameObject.GetComponent<Collectable>().isHidden = true;
+					StartCoroutine(setMaterialTransparent(hit.transform.gameObject));
 					oldHits.Add(hit.transform.gameObject);
 
 				}
@@ -48,6 +46,8 @@ public class ObjectHider : MonoBehaviour
 		for(int i = 0; i < oldHits.Count(); i++) {
 
 			bool isHitten = false;
+
+			//check object exit raycast
 			for(int j = 0; j < hits.Count(); j++) {
 
 				if(hits[j].transform.gameObject == oldHits[i]) {
@@ -55,6 +55,7 @@ public class ObjectHider : MonoBehaviour
 				}
 			}
 
+			//set opaque on exit raycast
 			if(!isHitten) {
 
 				if(oldHits[i] == null) {
@@ -66,7 +67,6 @@ public class ObjectHider : MonoBehaviour
 					}
 					oldHits.Remove(oldHits[i]);
 					isHitten = false;
-					Debug.Log("MAKE OPAQUE !");
 				}
 			}
 		}
@@ -77,14 +77,14 @@ public class ObjectHider : MonoBehaviour
 
 		Debug.Log("start hidding");
 
-		float fadeTime = 1.0f;
-		var rend = go.GetComponent<Renderer>();
+		float fadeTime = 0.3f;
+		Renderer rend = go.GetComponent<Renderer>();
 
 		//set material to transparent
 		StandardShaderUtils.ChangeRenderMode(rend.material, StandardShaderUtils.BlendMode.Fade);
 
-		var startColor = Color.white;
-		var endColor = new Color(1, 1, 1, 0);
+		Color startColor = Color.white;
+		Color endColor = new Color(1, 1, 1, 0);
 
 		for (float t = 0.0f; t < fadeTime; t += Time.deltaTime) {
 			rend.material.color = Color.Lerp(startColor, endColor, t / fadeTime);
