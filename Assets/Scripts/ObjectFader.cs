@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 
-public class ObjectHider : MonoBehaviour
-{
+public class ObjectFader : MonoBehaviour {
 
 	private GameObject mainCamera;
 	private List<GameObject> oldHits = new List<GameObject>();
@@ -12,14 +11,12 @@ public class ObjectHider : MonoBehaviour
 	// private List<RaycastHit> OLLLDHits = new List<RaycastHit>();
 
 	// Start is called before the first frame update
-	void Start()
-    {
+	void Start() {
 		mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
 	}
 
-    // Update is called once per frame
-    void Update()
-    {
+	// Update is called once per frame
+	void Update() {
 		RaycastHit[] hits;
 
 		Vector3 direction = transform.position - mainCamera.transform.position;
@@ -30,10 +27,10 @@ public class ObjectHider : MonoBehaviour
 		hits = Physics.RaycastAll(transform.position, direction * -1, distance);
 
 		//set transparency on hit
-		foreach(RaycastHit hit in hits) {
+		foreach (RaycastHit hit in hits) {
 
-			if(hit.transform.gameObject.GetComponent<Collectable>() != null) {
-				if(!hit.transform.gameObject.GetComponent<Collectable>().isHidden) {
+			if (hit.transform.gameObject.GetComponent<Collectable>() != null) {
+				if (!hit.transform.gameObject.GetComponent<Collectable>().isHidden) {
 
 					hit.transform.gameObject.GetComponent<Collectable>().isHidden = true;
 					StartCoroutine(setMaterialTransparent(hit.transform.gameObject));
@@ -43,26 +40,27 @@ public class ObjectHider : MonoBehaviour
 			}
 		}
 
-		for(int i = 0; i < oldHits.Count(); i++) {
+		for (int i = 0; i < oldHits.Count(); i++) {
 
 			bool isHitten = false;
 
 			//check object exit raycast
-			for(int j = 0; j < hits.Count(); j++) {
+			for (int j = 0; j < hits.Count(); j++) {
 
-				if(hits[j].transform.gameObject == oldHits[i]) {
+				if (hits[j].transform.gameObject == oldHits[i]) {
 					isHitten = true;
 				}
 			}
 
 			//set opaque on exit raycast
-			if(!isHitten) {
+			if (!isHitten) {
 
-				if(oldHits[i] == null) {
+				if (oldHits[i] == null) {
 					oldHits.Remove(oldHits[i]);
 				} else {
-					setMaterialOpaque(oldHits[i]);
-					if(oldHits[i].GetComponent<Collectable>() != null) {
+					//setMaterialOpaque(oldHits[i]);
+					StartCoroutine(setMaterialOpaque(oldHits[i]));
+					if (oldHits[i].GetComponent<Collectable>() != null) {
 						oldHits[i].GetComponent<Collectable>().isHidden = false;
 					}
 					oldHits.Remove(oldHits[i]);
@@ -93,12 +91,19 @@ public class ObjectHider : MonoBehaviour
 
 	}
 
-	private void setMaterialOpaque(GameObject go) {
+	IEnumerator setMaterialOpaque(GameObject go) {
 
-		var rend = go.GetComponent<Renderer>();
+		Renderer rend = go.GetComponent<Renderer>();
 
-		//set material to opaque
+		float fadeTime = 0.3f;
+
+		Color startColor = new Color(1, 1, 1, 0);
+
+		for (float t = 0.0f; t < fadeTime; t += Time.deltaTime) {
+			rend.material.color = Color.Lerp(startColor, Color.white, t / fadeTime);
+			yield return null;
+		}
 		StandardShaderUtils.ChangeRenderMode(rend.material, StandardShaderUtils.BlendMode.Opaque);
-		rend.material.color = Color.white;
+		//rend.material.color = Color.white;
 	}
 }
