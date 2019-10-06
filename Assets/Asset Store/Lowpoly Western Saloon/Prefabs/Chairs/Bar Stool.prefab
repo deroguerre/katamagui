@@ -128,7 +128,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   generation: 1
   generationLimit: 3
-  cuts: 10
+  cuts: 8
   fillCut: 1
   sendPreSplitMessage: 1
   sendPostSplitMessage: 1
@@ -152,6 +152,7 @@ MonoBehaviour:
   requiredVelocity: 1
   cooldownTime: 0.5
   earnPoints: 1
+  isHidden: 0
 --- !u!114 &1814002174
 MonoBehaviour:
   m_ObjectHideFlags: 0

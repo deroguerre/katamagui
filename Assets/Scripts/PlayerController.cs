@@ -78,6 +78,7 @@ public class PlayerController : MonoBehaviour {
 		Vector2 input = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
 		input = Vector2.ClampMagnitude(input, 1);
 
+		//move player to camera direction
 		if (mainCamera != null) {
 
 			Vector3 camF = mainCamera.transform.forward;

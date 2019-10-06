@@ -22,8 +22,8 @@ public class ObjectFader : MonoBehaviour {
 		Vector3 direction = transform.position - mainCamera.transform.position;
 		float distance = Vector3.Distance(transform.position, mainCamera.transform.position);
 
+		//raycast
 		Debug.DrawRay(transform.position, direction * -1, Color.red);
-
 		hits = Physics.RaycastAll(transform.position, direction * -1, distance);
 
 		//set transparency on hit
@@ -100,10 +100,11 @@ public class ObjectFader : MonoBehaviour {
 		Color startColor = new Color(1, 1, 1, 0);
 
 		for (float t = 0.0f; t < fadeTime; t += Time.deltaTime) {
+
 			rend.material.color = Color.Lerp(startColor, Color.white, t / fadeTime);
 			yield return null;
 		}
+
 		StandardShaderUtils.ChangeRenderMode(rend.material, StandardShaderUtils.BlendMode.Opaque);
-		//rend.material.color = Color.white;
 	}
 }

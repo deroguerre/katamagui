@@ -47,6 +47,8 @@ public class Collectable : MonoBehaviour {
 					if (gameObject.GetComponent<Collectable>().stuckResistance > collision.gameObject.GetComponent<Player>().stuckPower) {
 
 						if (gameObject.GetComponent<Collectable>().shatterResistance < collision.gameObject.GetComponent<Player>().shatterPower) {
+
+							collision.gameObject.GetComponent<ObjectFader>().StopAllCoroutines();
 							StartShatter(collision);
 						}
 					}
@@ -95,10 +97,9 @@ public class Collectable : MonoBehaviour {
 		}
 
 		//set visible if hidden by raycasting between player and camera
-		if(gameObject.GetComponent<Collectable>().isHidden) {
+		if (gameObject.GetComponent<Collectable>().isHidden) {
 			Renderer rend = gameObject.GetComponent<Renderer>();
-			StandardShaderUtils.ChangeRenderMode(rend.material, StandardShaderUtils.BlendMode.Fade);
-			rend.material.color = Color.white;
+			StandardShaderUtils.ChangeRenderMode(rend.material, StandardShaderUtils.BlendMode.Opaque);
 		}
 
 		//remove box collider
