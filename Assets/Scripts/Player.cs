@@ -79,20 +79,21 @@ public class Player : MonoBehaviour {
 		_scoreStep *= 2f;
 		_scoreToNextLevel += _scoreStep;
 
-		//_scale.x += 2f;
-		//_scale.y += 2f;
-		//_scale.z += 2f;
-
 		_scale.x = _level;
 		_scale.y = _level;
 		_scale.z = _level;
 
-		stuckPower = _level * 5;
+		stuckPower = _level * 3;
 		shatterPower = _level * 3;
-		//gameObject.GetComponent<Rigidbody>().mass += (_scoreStep / 4);
+		gameObject.GetComponent<Rigidbody>().mass = _level;
 
 		gameObject.GetComponent<MSCameraController>().CameraSettings.orbital.minDistance = _level * 5f;
 		gameObject.GetComponent<MSCameraController>().CameraSettings.orbital.maxDistance = _level * 8f;
+
+		gameObject.GetComponent<PlayerController>().moveSpeed = _level * gameObject.GetComponent<Rigidbody>().mass * 2;
+
+
+		//##### SET DEBRIS SCALE
 
 		//set null the debris of player before scale it
 		foreach (GameObject debris in _collectedDebrisQueue) {
@@ -105,6 +106,8 @@ public class Player : MonoBehaviour {
 		foreach (GameObject child in _collectedDebrisQueue) {
 			child.transform.parent = gameObject.transform;
 		}
+
+		//##### END SET DEBRIS SCALE
 
 	}
 
@@ -158,9 +161,14 @@ public class Player : MonoBehaviour {
 		GUI.Label(new Rect(10, 10, 200, 20), "score: " + _score);
 		GUI.Label(new Rect(10, 20, 200, 20), "score to next level: " + _scoreToNextLevel);
 		GUI.Label(new Rect(10, 30, 200, 20), "level: " + _level);
-		GUI.Label(new Rect(10, 40, 200, 20), "scale: " + _scale);
 
-		GUI.Label(new Rect(10, 60, 200, 20), "stuck power: " + stuckPower);
-		GUI.Label(new Rect(10, 70, 200, 20), "shatter power: " + shatterPower);
+		GUI.Label(new Rect(10, 50, 200, 20), "scale: " + _scale);
+		GUI.Label(new Rect(10, 60, 200, 20), "mass: " + gameObject.GetComponent<Rigidbody>().mass);
+		GUI.Label(new Rect(10, 70, 200, 20), "move speed: " + gameObject.GetComponent<PlayerController>().moveSpeed);
+		GUI.Label(new Rect(10, 80, 200, 20), "velocity: " + gameObject.GetComponent<Rigidbody>().velocity);
+
+		GUI.Label(new Rect(10, 100, 200, 20), "stuck power: " + stuckPower);
+		GUI.Label(new Rect(10, 110, 200, 20), "shatter power: " + shatterPower);
+
 	}
 }
