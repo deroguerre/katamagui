@@ -60,13 +60,13 @@ public class PlayerController : MonoBehaviour {
 			//Debug.Log("Left Dash");
 		}
 
-		//if (Input.GetAxis("Dash") > 0.1f) {
-		//	//Debug.Log("Right Dash");
-		//	moveSpeed = 100f;
-		//	//thisRigibody.AddForce(Vector3.up * jumpHeight * 100);
-		//} else {
-		//	moveSpeed = 30f;
-		//}
+		if (Input.GetAxis("Dash") > 0.1f) {
+			//Debug.Log("Right Dash");
+			moveSpeed = 100f;
+			//thisRigibody.AddForce(Vector3.up * jumpHeight * 100);
+		} else {
+			moveSpeed = 30f;
+		}
 
 	}
 

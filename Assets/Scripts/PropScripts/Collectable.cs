@@ -78,14 +78,30 @@ public class Collectable : MonoBehaviour {
 			}
 		}
 
+		//remove box collider
+		if (gameObject.GetComponent<BoxCollider>() != null) {
+			Destroy(gameObject.GetComponent<BoxCollider>());
+			Debug.Log("Box Collider removed");
+		}
+
+		//remove all colliders
+		if (gameObject.transform.Find("Colliders") != null) {
+			Destroy(gameObject.transform.Find("Colliders").gameObject);
+		}
+
 		//add mesh collider
 		if (gameObject.GetComponent<MeshCollider>() == null) {
 			gameObject.AddComponent<MeshCollider>();
 		}
 		gameObject.GetComponent<MeshCollider>().convex = true;
 
+		//set visible if hidden by raycasting between player and camera
+		if (gameObject.GetComponent<Collectable>().isHidden) {
+			Renderer rend = gameObject.GetComponent<Renderer>();
+			StandardShaderUtils.ChangeRenderMode(rend.material, StandardShaderUtils.BlendMode.Opaque);
+		}
 
-		// Find the new contact point
+		// Find the new contact point and send shatter event
 		foreach (ContactPoint contact in collision.contacts) {
 			// Make sure that we don't shatter if another object in the hierarchy was hit
 			if (contact.otherCollider == collision.collider) {
@@ -94,22 +110,6 @@ public class Collectable : MonoBehaviour {
 
 				break;
 			}
-		}
-
-		//set visible if hidden by raycasting between player and camera
-		if (gameObject.GetComponent<Collectable>().isHidden) {
-			Renderer rend = gameObject.GetComponent<Renderer>();
-			StandardShaderUtils.ChangeRenderMode(rend.material, StandardShaderUtils.BlendMode.Opaque);
-		}
-
-		//remove box collider
-		if (gameObject.GetComponent<BoxCollider>() != null) {
-			Destroy(gameObject.GetComponent<BoxCollider>());
-		}
-
-		//remove all colliders
-		if (gameObject.transform.Find("Colliders") != null) {
-			Destroy(gameObject.transform.Find("Colliders").gameObject);
 		}
 	}
 

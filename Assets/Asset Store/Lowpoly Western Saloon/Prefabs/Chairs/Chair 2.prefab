@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 1936875346938743627}
   - component: {fileID: 4225055596741754947}
   - component: {fileID: 394224562730113446}
-  - component: {fileID: 1275218108989617202}
   - component: {fileID: 2701361266056577817}
   - component: {fileID: 5293997340102231322}
   m_Layer: 0
@@ -120,6 +119,7 @@ MonoBehaviour:
   requiredVelocity: 1
   cooldownTime: 0.5
   earnPoints: 1
+  isHidden: 0
 --- !u!114 &394224562730113446
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -139,20 +139,6 @@ MonoBehaviour:
   sendPreSplitMessage: 1
   sendPostSplitMessage: 1
   internalHullType: 0
---- !u!114 &1275218108989617202
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 183186}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62b9da142b71b40e6ada0cf8dc2aa245, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  requiredVelocity: 1
-  cooldownTime: 0.5
 --- !u!114 &2701361266056577817
 MonoBehaviour:
   m_ObjectHideFlags: 0

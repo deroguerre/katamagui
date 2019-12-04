@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 3451272282718787538}
   - component: {fileID: 3451272282718787537}
   - component: {fileID: 8779062262259573695}
-  - component: {fileID: 564194273247482955}
   - component: {fileID: 7695752162352605859}
   - component: {fileID: 6615882423045132498}
   - component: {fileID: 1965011732431403432}
@@ -98,23 +97,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isCollectable: 1
-  shatterResistance: 50
+  isShatterable: 0
   stuckResistance: 100
-  earnPoints: 50
---- !u!114 &564194273247482955
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3451272282718787543}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62b9da142b71b40e6ada0cf8dc2aa245, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  shatterResistance: 50
   requiredVelocity: 1
   cooldownTime: 0.5
+  earnPoints: 50
+  isHidden: 0
 --- !u!114 &7695752162352605859
 MonoBehaviour:
   m_ObjectHideFlags: 0

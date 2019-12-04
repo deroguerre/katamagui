@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 23823148642838644}
   - component: {fileID: 1865762187252367843}
   - component: {fileID: -7832466810048593202}
+  - component: {fileID: 8771106887536284556}
   m_Layer: 0
   m_Name: axe1H4
   m_TagString: Untagged
@@ -56,6 +57,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
@@ -110,3 +112,23 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &8771106887536284556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1339439995016740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf2a2ae54bb441a4b80ceb65281ae021, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isCollectable: 1
+  isShatterable: 0
+  stuckResistance: 1
+  shatterResistance: 1
+  requiredVelocity: 1
+  cooldownTime: 0.5
+  earnPoints: 1
+  isHidden: 0

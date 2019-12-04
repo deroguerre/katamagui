@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4000013611353160}
   - component: {fileID: 33000010568049556}
   - component: {fileID: 23000013440227832}
+  - component: {fileID: 6588391170319557263}
   - component: {fileID: -4225892166863376936}
   - component: {fileID: -5077459403868004089}
   m_Layer: 0
@@ -56,6 +57,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -81,6 +83,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &6588391170319557263
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000013397250350}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 712b5232e63e8554e9bdea80033cf8a7, type: 3}
 --- !u!54 &-4225892166863376936
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -116,3 +132,4 @@ MonoBehaviour:
   requiredVelocity: 1
   cooldownTime: 0.5
   earnPoints: 1
+  isHidden: 0
